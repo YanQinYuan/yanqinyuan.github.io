@@ -142,46 +142,6 @@
 
 <div class="posts">
   <h1>
-    <a href="/python-Coroutine.html">python 协程详解</a>
-  </h1>
-  
-  <p>
-    
- <a href="/python-Coroutine.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 13 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/decorate-python.html">python 修饰器</a>
-  </h1>
-  
-  <p>
-    
- <a href="/decorate-python.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 13 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
     <a href="/chardet.html">python 检测编码模块———chardet</a>
   </h1>
   
@@ -239,6 +199,68 @@ class PythonOrgSearch(unittest.TestCase):
   
   
     2 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/os-path.html">python 操作文件和目录</a>
+  </h1>
+  
+  <p>
+    &gt;&gt;&gt;os.path.abspath('.')
+'/www'
+&gt;&gt;&gt;os.path.join('/www','testdir')
+/www/testdir
+&gt;&gt;&gt;os.path.mkdir('/www/testdir')
+&gt;&gt;&gt;os.path.rmdir('/www/testdir')
+&gt;&gt;&gt;os.path.split('/www/testdir/file.txt')
+('www/testdir','file.txt')
+&gt;&gt;&gt;os.path.splitext('/www/testdir/file.txt') # 获取文件扩展名
+('/www/testdir/file','.tx... <a href="/tech/os-path.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/doc-test.html">python 文档测试</a>
+  </h1>
+  
+  <p>
+    doctest 模块按照交互模式自动执行注释内容，以此测试测程序
+class Dict(dict):
+    '''
+    &gt;&gt;&gt; d1 = Dict()
+    &gt;&gt;&gt; d1.y = 200
+    &gt;&gt;&gt; d1['y']
+    200
+    &gt;&gt;&gt; d2 = Dict(a=1, b=2, c='3')
+    &gt;&gt;&gt; d2.c
+    '3'
+    '''
+    def __init__(self, **kw):
+        super(Dict, self).__init__(**kw)
+
+    def __getattr__(self, key):
+        try:... <a href="/tech/doc-test.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
   
 
 

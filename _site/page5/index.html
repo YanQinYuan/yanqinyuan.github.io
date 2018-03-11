@@ -105,30 +105,26 @@
       
 <div class="posts">
   <h1>
-    <a href="/literatrue/waiting.html">等</a>
+    <a href="/tech/git.html">极简 git 使用指南</a>
   </h1>
   
   <p>
-    灰蒙蒙的春雨持续了一个月
-街道上寂寥无人
-狗在等着出门
-学生等着上课
-售票员等着乘客
-小偷等着老妇人
+    下载地址：git
 
-写字楼里
-西装革履的白领等着无聊的会议
-厕所里的清洁工等着便池冲洗的声音
-食堂里的阿姨穿梭在雾气氤氲的厨房里
-黑色工装的保安悄无声息地徘徊在走廊上
-
-所有人都在怀念不久前那一场雪
-所有人都在等着更明媚的夏天
-
-而我只是在等你
-
- <a href="/literatrue/waiting.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 04 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+常用命令：
+git init //初始化新仓库
+git clone //复制一个仓库
+git add //添加文件或者目录到缓冲区
+git rm [file]//删除文件(仓库，缓冲，本地）
+git rm --cached [file] //
+git commit //版本提交
+git commit -a //自动版本提交（相当于add + commit）
+git status //查看当前状态（刚提交完是Clean，否则会列出cached和没有加入的文件清单
+git diff //查看上次提交后（包括缓冲）文件有什么变化
+git log //查看版本提交记录
+git reset --hard [版本号] //回滚到某个版本
+git reset --soft [版本... <a href="/tech/git.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -142,23 +138,41 @@
 
 <div class="posts">
   <h1>
-    <a href="/essay/positive-sum-game.html">正和博弈</a>
+    <a href="/tech/heroku.html">Heroku 部署 python 应用</a>
   </h1>
   
   <p>
-    1
-正和博弈论是博弈论中的一种理论，又称合作博弈。是指一些参与者以联盟、互相合作进行的博弈。这样一来博弈活动就变成了不同集团之间的对抗。合作博弈的相反是非合作博弈。
+    方法1：heroku cli 部署
+环境： macos
 
-正和博弈导致的结果往往是共赢。
+下载 heroku cli
 
-用在市场中，正和博弈即 dt&gt;0。t 代表交易。有交易才有财富，财富产自交易。交易是典型的正和博弈。例如，我有一台旧电脑，而你正好需要一台电脑，我们低价成交。这时你拥有生产工具，而我也有了资金，两全其美。
+heroku download 
 
-也许你会问，如果我用假钞交易呢？如果我卖的电脑有暗病没有告诉对方？这时只有一方获利丰厚，另一方损失。这是零和博弈。
+登录 heroku
+heroku login
 
-零和博弈则与正和博弈相反，即一方有所得，其他方必有所失。其导致结果一般是：一方胜利，一方失败。
 
-负和博弈则是损人又害己。例如我用假钞买了你的坏电脑，结果两人都... <a href="/essay/positive-sum-game.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 31 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+项目根目录创建 Procfile 文件，写入项目启动命令
+
+web: gunicorn -w 4 run:app
+
+
+用 gunicorn 测试是否能跑通
+gunicorn -w 4 run:app
+
+
+创建 Pipfile 文件，该文件指示程序依赖包
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+flask = "*"
+gunicorn = "*"
+psycopg2 = "*"
+requests = ... <a href="/tech/heroku.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 26 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -172,13 +186,50 @@
 
 <div class="posts">
   <h1>
-    <a href="/tech%23/howto-testgently.html">如何优雅地完成项目测试</a>
+    <a href="/tech/appium01.html">玩转 Appium</a>
   </h1>
   
   <p>
-    
- <a href="/tech%23/howto-testgently.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 31 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+    安装
+windows 环境 :
+
+  npm
+  java 1.8
+  Android SDK
+
+
+接着安装 appium 服务端
+npm install -g appium
+
+
+下载 appium 客户端（这里选择 python 版本）
+
+pip install Appium-Python-Client
+
+
+检查安装是否成功
+
+appium-doctor
+
+使用
+
+启动
+
+appium
+
+
+代码实例
+
+import os
+from time import sleep
+
+import unittest
+
+from appium import webdriver
+
+# Returns abs path relative to this file and not cwd
+PATH = la... <a href="/tech/appium01.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 25 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -192,27 +243,30 @@
 
 <div class="posts">
   <h1>
-    <a href="/tech/sqlchemy-pg.html">解决生产测试环境数据库变量问题</a>
+    <a href="/tech/pyenv.html">Pyenv 管理 Python 版本</a>
   </h1>
   
   <p>
-    系统环境：ubuntu/macos，python，virtualenv,flask
+    安装 pyenv
 
-把以下代码加入 bin/activate 文件中（或者 docker 的 启动文件里），在环境启动的时候加入系统变量
-
-export POSTGRES_URL="127.0.0.1:5432"
-export POSTGRES_USER="postgres"
-export POSTGRES_PW="dbpw"
-export POSTGRES_DB="test"
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
 
-增加方法获取系统变量：
-def get_env_variable(name):
-    try:
-        return os.environ[name]
-    except KeyError:
-        message = "... <a href="/tech/sqlchemy-pg.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+将 PYENV_ROOT 和 pyenv init 加入 bash的 ~/.bashrc
+
+echo 'export PATH=~/.pyenv/bin:$PATH' &gt;&gt; ~/.bashrc
+echo 'export PYENV_ROOT=~/.pyenv' &gt;&gt; ~/.bashrc
+echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bashrc
+
+下载 python 版本
+
+pyenv install 3.6.2
+
+
+安装 pyenv-virtualenv
+
+git clone https://g... <a href="/tech/pyenv.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -226,28 +280,31 @@ def get_env_variable(name):
 
 <div class="posts">
   <h1>
-    <a href="/essay/sports.html">当我运动的时候，我在想些什么</a>
+    <a href="/tech/run-flask.html">MVP 开发指南——如何快速打造你的第一个 APP</a>
   </h1>
   
   <p>
-    入门
-「游泳健身了解一下吗？」
+    人生最幸福的事是什么？
 
-三百九十一天前，这个世界上最关心我的人————健身房销售，把我领进了健身房。
+书架上是自己写的书，钱包里是自己赚的钱；出门逛街，对面大厦的海报是自己设计的海报；打开手机
+用着自己设计的 APP；没错，成为一名创作者，就是最幸福的事。
 
-在销售陪同下，伴随强劲的低音炮，汗水和气味，我们一同领略了这个另类的自虐基地。
+此教程用于教六个月前的自己学编程，那时年纪尚浅，不懂如何上路…
 
-自此以后，隔天去健身房，春夏秋冬，从未间断。
+如何做出好产品——MVP
 
-记得刚开始健身的时候正值冬天，每次练完后，汗水贴在身体上，顶着寒风跑回家。那种感觉就像一只刚打完鸡血的落汤鸡瑟瑟发抖地站在海边。
+MVP,英文全称「Minimum viable product」，即最小可用产品。先有构思，再拆解业务。再逐一实现。
 
-那些日子，风很喧嚣。
 
-缘起
-四年前，生了一场病。那段时间一到晚上就发高烧，每晚都在医院的病房里打点滴。医院楼里，白色灯光照得昏昏欲睡，头随时要炸裂。福尔马林药水味充斥鼻腔。耳边只听见点滴「哒哒」滴落的声音，还有不知从哪传来的，痛苦而低沉的呻吟。
+  Development path from a minimum viable product to more complex product.
 
-持续高烧一个多月后，终于消停了。之后便开始跑步，每天十公里，绕着操场... <a href="/essay/sports.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+从最小可用产品到复杂产品，一步一步来，比起闭门造车更可行，不易造成行为瘫痪与认知过载。
+
+学习方法论
+
+  学习新框架，直接看官方文档。先 Q... <a href="/tech/run-flask.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 人在行云里
+title: 随笔
 ---
 <ul class="posts">
   {% for post in site.categories.essay %}

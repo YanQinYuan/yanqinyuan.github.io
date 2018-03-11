@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: 联系
 ---
 
 生于南粤，长于南粤。    
