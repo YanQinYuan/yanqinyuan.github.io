@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      解决生产测试环境数据库变量问题 | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>解决生产测试环境数据库变量问题 | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="解决生产测试环境数据库变量问题" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="系统环境：ubuntu/macos，python，virtualenv,flask" />
+<meta property="og:description" content="系统环境：ubuntu/macos，python，virtualenv,flask" />
+<link rel="canonical" href="http://localhost:4000/tech/sqlchemy-pg.html" />
+<meta property="og:url" content="http://localhost:4000/tech/sqlchemy-pg.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-28T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"系统环境：ubuntu/macos，python，virtualenv,flask","@type":"BlogPosting","headline":"解决生产测试环境数据库变量问题","dateModified":"2018-01-28T00:00:00+08:00","datePublished":"2018-01-28T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/sqlchemy-pg.html"},"url":"http://localhost:4000/tech/sqlchemy-pg.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  解决生产测试环境数据库变量问题
+</h1>
+
+
+
+<p>系统环境：ubuntu/macos，python，virtualenv,flask</p>
+
+<p>把以下代码加入 bin/activate 文件中（或者 docker 的 启动文件里），在环境启动的时候加入系统变量</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="nx">POSTGRES_URL</span><span class="o">=</span><span class="s2">"127.0.0.1:5432"</span>
+<span class="k">export</span> <span class="nx">POSTGRES_USER</span><span class="o">=</span><span class="s2">"postgres"</span>
+<span class="k">export</span> <span class="nx">POSTGRES_PW</span><span class="o">=</span><span class="s2">"dbpw"</span>
+<span class="k">export</span> <span class="nx">POSTGRES_DB</span><span class="o">=</span><span class="s2">"test"</span>
+</code></pre></div></div>
+
+<p>增加方法获取系统变量：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_env_variable</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s">"Expected environment variable '{}' not set."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="c"># the values of those depend on your setup</span>
+<span class="n">POSTGRES_URL</span> <span class="o">=</span> <span class="n">get_env_variable</span><span class="p">(</span><span class="s">"POSTGRES_URL"</span><span class="p">)</span>
+<span class="n">POSTGRES_USER</span> <span class="o">=</span> <span class="n">get_env_variable</span><span class="p">(</span><span class="s">"POSTGRES_USER"</span><span class="p">)</span>
+<span class="n">POSTGRES_PW</span> <span class="o">=</span> <span class="n">get_env_variable</span><span class="p">(</span><span class="s">"POSTGRES_PW"</span><span class="p">)</span>
+<span class="n">POSTGRES_DB</span> <span class="o">=</span> <span class="n">get_env_variable</span><span class="p">(</span><span class="s">"POSTGRES_DB"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>使用 SQLALchemy ：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">DB_URL</span> <span class="o">=</span> <span class="s">'postgresql+psycopg2://{user}:{pw}@{url}/{db}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">POSTGRES_USER</span><span class="p">,</span><span class="n">pw</span><span class="o">=</span><span class="n">POSTGRES_PW</span><span class="p">,</span><span class="n">url</span><span class="o">=</span><span class="n">POSTGRES_URL</span><span class="p">,</span><span class="n">db</span><span class="o">=</span><span class="n">POSTGRES_DB</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DB_URL</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span> <span class="c"># silence the deprecation warning</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</code></pre></div></div>
+
+
+<span class="post-date">
+  Written on
+  
+  January
+  28th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=解决生产测试环境数据库变量问题&amp;url=/tech/sqlchemy-pg.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/sqlchemy-pg.html&amp;title=解决生产测试环境数据库变量问题" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/sqlchemy-pg.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

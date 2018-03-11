@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      玩转 Appium | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>玩转 Appium | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="玩转 Appium" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="安装 windows 环境 : npm java 1.8 Android SDK" />
+<meta property="og:description" content="安装 windows 环境 : npm java 1.8 Android SDK" />
+<link rel="canonical" href="http://localhost:4000/tech/appium01.html" />
+<meta property="og:url" content="http://localhost:4000/tech/appium01.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-25T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"安装 windows 环境 : npm java 1.8 Android SDK","@type":"BlogPosting","headline":"玩转 Appium","dateModified":"2018-01-25T00:00:00+08:00","datePublished":"2018-01-25T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/appium01.html"},"url":"http://localhost:4000/tech/appium01.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  玩转 Appium
+</h1>
+
+
+
+<h2 id="安装">安装</h2>
+<p>windows 环境 :</p>
+<ul>
+  <li>npm</li>
+  <li>java 1.8</li>
+  <li>Android SDK</li>
+</ul>
+
+<p>接着安装 appium <strong>服务端</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">appium</span>
+</code></pre></div></div>
+
+<p>下载 appium <strong>客户端</strong>（这里选择 python 版本）</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">Appium</span><span class="o">-</span><span class="n">Python</span><span class="o">-</span><span class="n">Client</span>
+</code></pre></div></div>
+
+<p>检查安装是否成功</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">appium</span><span class="o">-</span><span class="n">doctor</span>
+</code></pre></div></div>
+<h2 id="使用">使用</h2>
+
+<p>启动</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">appium</span>
+</code></pre></div></div>
+
+<p>代码实例</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">appium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="c"># Returns abs path relative to this file and not cwd</span>
+<span class="n">PATH</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="n">p</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">SimpleAndroidTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">desired_caps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">desired_caps</span><span class="p">[</span><span class="s">'platformName'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Android'</span>
+        <span class="n">desired_caps</span><span class="p">[</span><span class="s">'platformVersion'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'5.1.1'</span>
+        <span class="n">desired_caps</span><span class="p">[</span><span class="s">'deviceName'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'192.168.58.101:5555'</span>
+        <span class="n">desired_caps</span><span class="p">[</span><span class="s">'app'</span><span class="p">]</span> <span class="o">=</span> <span class="n">PATH</span><span class="p">(</span>
+            <span class="s">'D:/istl/sample-code/sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk'</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span><span class="p">(</span><span class="s">'http://localhost:4723/wd/hub'</span><span class="p">,</span> <span class="n">desired_caps</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># end the session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_find_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">el</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_accessibility_id</span><span class="p">(</span><span class="s">'Graphics'</span><span class="p">)</span>
+        <span class="n">el</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+        <span class="n">el</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_accessibility_id</span><span class="p">(</span><span class="s">'Arcs'</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
+
+        <span class="n">el</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_accessibility_id</span><span class="p">(</span><span class="s">"App"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+
+        <span class="n">els</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_android_uiautomator</span><span class="p">(</span><span class="s">"new UiSelector().clickable(true)"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertGreaterEqual</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">els</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_android_uiautomator</span><span class="p">(</span><span class="s">'text("API Demos")'</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">test_simple_actions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">el</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_accessibility_id</span><span class="p">(</span><span class="s">'Graphics'</span><span class="p">)</span>
+        <span class="n">el</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+        <span class="n">el</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_accessibility_id</span><span class="p">(</span><span class="s">'Arcs'</span><span class="p">)</span>
+        <span class="n">el</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_android_uiautomator</span><span class="p">(</span><span class="s">'new UiSelector().text("Graphics/Arcs")'</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">SimpleAndroidTests</span><span class="p">)</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="常用方法定位控件">常用方法（定位，控件）</h2>
+<p>参考：
+<a href="https://github.com/appium/python-client">appium 常用方法</a></p>
+
+
+<span class="post-date">
+  Written on
+  
+  January
+  25th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=玩转 Appium&amp;url=/tech/appium01.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/appium01.html&amp;title=玩转 Appium" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/appium01.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      极简 git 使用指南 | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>极简 git 使用指南 | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="极简 git 使用指南" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="下载地址：git" />
+<meta property="og:description" content="下载地址：git" />
+<link rel="canonical" href="http://localhost:4000/tech/git.html" />
+<meta property="og:url" content="http://localhost:4000/tech/git.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-27T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"下载地址：git","@type":"BlogPosting","headline":"极简 git 使用指南","dateModified":"2018-01-27T00:00:00+08:00","datePublished":"2018-01-27T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/git.html"},"url":"http://localhost:4000/tech/git.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  极简 git 使用指南
+</h1>
+
+
+
+<p>下载地址：<a href="https://git-scm.com/downloads">git</a></p>
+
+<h3 id="常用命令">常用命令：</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">git</span> <span class="nx">init</span> <span class="c1">//初始化新仓库</span>
+<span class="nx">git</span> <span class="nx">clone</span> <span class="c1">//复制一个仓库</span>
+<span class="nx">git</span> <span class="nx">add</span> <span class="c1">//添加文件或者目录到缓冲区</span>
+<span class="nx">git</span> <span class="nx">rm</span> <span class="p">[</span><span class="nx">file</span><span class="p">]</span><span class="c1">//删除文件(仓库，缓冲，本地）</span>
+<span class="nx">git</span> <span class="nx">rm</span> <span class="o">--</span><span class="nx">cached</span> <span class="p">[</span><span class="nx">file</span><span class="p">]</span> <span class="c1">//</span>
+<span class="nx">git</span> <span class="nx">commit</span> <span class="c1">//版本提交</span>
+<span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">a</span> <span class="c1">//自动版本提交（相当于add + commit）</span>
+<span class="nx">git</span> <span class="nx">status</span> <span class="c1">//查看当前状态（刚提交完是Clean，否则会列出cached和没有加入的文件清单</span>
+<span class="nx">git</span> <span class="nx">diff</span> <span class="c1">//查看上次提交后（包括缓冲）文件有什么变化</span>
+<span class="nx">git</span> <span class="nx">log</span> <span class="c1">//查看版本提交记录</span>
+<span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">hard</span> <span class="p">[</span><span class="err">版本号</span><span class="p">]</span> <span class="c1">//回滚到某个版本</span>
+<span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="p">[</span><span class="err">版本号</span><span class="p">]</span> <span class="c1">//回滚到某个版本，本地和缓冲里的文件不变</span>
+<span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">mixed</span> <span class="p">[</span><span class="err">版本号</span><span class="p">]</span> <span class="c1">//回滚到某个版本，本地文件不变</span>
+<span class="nx">git</span> <span class="nx">branch</span> <span class="c1">//分支命令，列出分支</span>
+<span class="nx">git</span> <span class="nx">branch</span> <span class="nx">xxx</span> <span class="c1">//创建xxx分支（默认不切换）</span>
+<span class="nx">git</span> <span class="nx">branch</span> <span class="o">-</span><span class="nx">d</span> <span class="nx">xxx</span> <span class="c1">//删除xxx分支 （如果已经merge）</span>
+<span class="nx">git</span> <span class="nx">branch</span> <span class="o">-</span><span class="nx">D</span> <span class="nx">xxx</span> <span class="c1">//删除xxx分支（即使没有merge）</span>
+<span class="nx">git</span> <span class="nx">branch</span> <span class="o">-</span><span class="nx">r</span> <span class="c1">//列出远程分支</span>
+<span class="nx">git</span> <span class="nx">merge</span> <span class="c1">//合并命令</span>
+<span class="nx">git</span> <span class="nx">help</span> <span class="c1">//查看帮助（极简）</span>
+</code></pre></div></div>
+<h3 id="远程仓库">远程仓库：</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">git</span> <span class="nx">remote</span> <span class="c1">//查看目前使用的远程仓库的别名</span>
+<span class="nx">git</span> <span class="nx">remote</span> <span class="nx">add</span> <span class="p">[</span><span class="err">别名</span><span class="p">]</span> <span class="p">[</span><span class="nx">URL</span><span class="p">]</span>  <span class="c1">//添加一个远程仓库别名</span>
+<span class="nx">git</span> <span class="nx">clone</span> <span class="p">[</span><span class="err">别名</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="nx">URL</span><span class="p">]</span>  <span class="c1">//克隆远端仓库</span>
+<span class="nx">git</span> <span class="nx">fetch</span> <span class="nx">origin</span> <span class="c1">//从远程仓库更新代码</span>
+<span class="nx">git</span> <span class="nx">pull</span> <span class="nx">origin</span> <span class="nx">master</span> <span class="c1">//从远程仓库下载代码并与本地代码合并</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">origin</span> <span class="nx">master</span>  <span class="c1">//把本地仓库推送到远程仓库</span>
+</code></pre></div></div>
+<h3 id="回滚操作">回滚操作：</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">git</span> <span class="nx">branch</span> <span class="nx">backup</span>
+<span class="nx">git</span> <span class="nx">log</span>
+<span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">hard</span> <span class="err">版本号</span>
+</code></pre></div></div>
+<h3 id="创建连接远程仓库的密匙">创建连接远程仓库的密匙</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ssh</span><span class="o">-</span><span class="nx">keygen</span> <span class="o">-</span><span class="nx">t</span> <span class="nx">rsa</span> <span class="o">-</span><span class="nx">C</span> <span class="s2">"you email address"</span>  <span class="c1">//创建密匙</span>
+
+<span class="err">然后在家目录的</span><span class="p">.</span><span class="nx">ssh</span><span class="err">目录中找到公钥</span><span class="nx">id_rsa</span><span class="p">.</span><span class="nx">pub</span><span class="err">，</span>  
+<span class="err">将该文件里的内容复制到系统剪贴板里。再打开</span><span class="nx">github</span>  
+<span class="err">的网站，到账号设置（</span><span class="nx">Settings</span><span class="err">），然后左边菜单里</span>  
+<span class="err">找“</span><span class="nx">SSH</span> <span class="o">&amp;</span> <span class="nx">GPG</span> <span class="nx">keys</span><span class="err">”，到里面把刚才复制的公钥拷贝</span>  
+<span class="err">到文本框中，确认即可。</span>
+
+<span class="nx">ssh</span> <span class="o">-</span><span class="nx">T</span> <span class="nx">git</span><span class="p">@</span><span class="nd">github</span><span class="p">.</span><span class="nx">com</span> <span class="c1">//测试</span>
+</code></pre></div></div>
+
+
+<span class="post-date">
+  Written on
+  
+  January
+  27th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=极简 git 使用指南&amp;url=/tech/git.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/git.html&amp;title=极简 git 使用指南" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/git.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

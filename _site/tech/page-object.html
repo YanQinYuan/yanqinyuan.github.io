@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Selenium 面向页面（page object） | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Selenium 面向页面（page object） | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Selenium 面向页面（page object）" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="面向页面编写测试用例的好处 减少重复代码。 如果页面变动，只需更改少部分代码，可维护性强。 适合团队协作。" />
+<meta property="og:description" content="面向页面编写测试用例的好处 减少重复代码。 如果页面变动，只需更改少部分代码，可维护性强。 适合团队协作。" />
+<link rel="canonical" href="http://localhost:4000/tech/page-object.html" />
+<meta property="og:url" content="http://localhost:4000/tech/page-object.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-12T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"面向页面编写测试用例的好处 减少重复代码。 如果页面变动，只需更改少部分代码，可维护性强。 适合团队协作。","@type":"BlogPosting","headline":"Selenium 面向页面（page object）","dateModified":"2018-02-12T00:00:00+08:00","datePublished":"2018-02-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/page-object.html"},"url":"http://localhost:4000/tech/page-object.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Selenium 面向页面（page object）
+</h1>
+
+
+
+<h2 id="面向页面编写测试用例的好处">面向页面编写测试用例的好处</h2>
+<ul>
+  <li>减少重复代码。</li>
+  <li>如果页面变动，只需更改少部分代码，可维护性强。</li>
+  <li>适合团队协作。</li>
+</ul>
+
+<p>来自<a href="http://selenium-python.readthedocs.io/page-objects.html">官网</a>的例子：</p>
+
+<h2 id="1-testcase">1. Test.case</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">import</span> <span class="nn">page</span>
+
+<span class="k">class</span> <span class="nc">PythonOrgSearch</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="s">"""A sample test class to show how page object works"""</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">()</span> <span class="c"># 创建 Firefox 的实例</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://www.python.org"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_search_in_python_org</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Tests python.org search feature. Searches for the word "pycon" then verified that some results show up.
+        Note that it does not look for any particular text in search results page. This test verifies that
+        the results were not empty.
+        """</span>
+
+        <span class="c">#Load the main page. In this case the home page of Python.org.</span>
+        <span class="n">main_page</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">MainPage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span> <span class="c"># 从 【主页】类创建一个实例，传入 driver参数</span>
+        <span class="c">#Checks if the word "Python" is in title</span>
+        <span class="k">assert</span> <span class="n">main_page</span><span class="o">.</span><span class="n">is_title_matches</span><span class="p">(),</span> <span class="s">"python.org title doesn't match."</span>
+        <span class="c">#Sets the text of search textbox to "pycon"</span>
+        <span class="n">main_page</span><span class="o">.</span><span class="n">search_text_element</span> <span class="o">=</span> <span class="s">"pycon"</span>
+        <span class="n">main_page</span><span class="o">.</span><span class="n">click_go_button</span><span class="p">()</span>
+        <span class="n">search_results_page</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">SearchResultsPage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span>
+        <span class="c">#Verifies that the results page is not empty</span>
+        <span class="k">assert</span> <span class="n">search_results_page</span><span class="o">.</span><span class="n">is_results_found</span><span class="p">(),</span> <span class="s">"No results found."</span>
+
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+<h2 id="2-page-object-classes">2. Page object classes</h2>
+<p>此文件用于封装各页面。比如主页，登录页，</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># page.py</span>
+<span class="kn">from</span> <span class="nn">element</span> <span class="kn">import</span> <span class="n">BasePageElement</span>
+<span class="kn">from</span> <span class="nn">locators</span> <span class="kn">import</span> <span class="n">MainPageLocators</span>
+
+<span class="k">class</span> <span class="nc">SearchTextElement</span><span class="p">(</span><span class="n">BasePageElement</span><span class="p">):</span>
+    <span class="s">"""This class gets the search text from the specified locator"""</span>
+
+    <span class="c"># The locator for search box where search string is entered</span>
+    <span class="n">locator</span> <span class="o">=</span> <span class="s">'q'</span>
+
+
+<span class="k">class</span> <span class="nc">BasePage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"""Base class to initialize the base page that will be called from all pages"""</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driver</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">driver</span>
+
+
+<span class="k">class</span> <span class="nc">MainPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+    <span class="s">"""Home page action methods come here. I.e. Python.org"""</span>
+
+    <span class="c">#Declares a variable that will contain the retrieved text</span>
+    <span class="n">search_text_element</span> <span class="o">=</span> <span class="n">SearchTextElement</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">is_title_matches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Verifies that the hardcoded text "Python" appears in page title"""</span>
+        <span class="k">return</span> <span class="s">"Python"</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">title</span>
+
+    <span class="k">def</span> <span class="nf">click_go_button</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Triggers the search"""</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="o">*</span><span class="n">MainPageLocators</span><span class="o">.</span><span class="n">GO_BUTTON</span><span class="p">)</span>
+        <span class="n">element</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">SearchResultsPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+    <span class="s">"""Search results page action methods come here"""</span>
+
+    <span class="k">def</span> <span class="nf">is_results_found</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># Probably should search for this text in the specific page</span>
+        <span class="c"># element, but as for now it works fine</span>
+        <span class="k">return</span> <span class="s">"No results found."</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">page_source</span>
+</code></pre></div></div>
+<h2 id="3-page-elements">3. Page elements</h2>
+<p>element.py 定义了页面元素</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># element.py</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+
+<span class="k">class</span> <span class="nc">BasePageElement</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"""Base page class that is initialized on every page object class."""</span>
+
+    <span class="k">def</span> <span class="nf">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="s">"""Sets the text to the value supplied"""</span>
+        <span class="n">driver</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">driver</span>
+        <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">driver</span><span class="p">:</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locator</span><span class="p">))</span>
+        <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locator</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locator</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+        <span class="s">"""Gets the text of the specified object"""</span>
+        <span class="n">driver</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">driver</span>
+        <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">driver</span><span class="p">:</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locator</span><span class="p">))</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locator</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s">"value"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="4-locators">4. locators</h2>
+<p>locators.py 文件用于定位元素，在这个例子中，同一个页面的定位器属于同一个类。</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># locators.py</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+
+<span class="k">class</span> <span class="nc">MainPageLocators</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"""A class for main page locators. All main page locators should come here"""</span>
+    <span class="n">GO_BUTTON</span> <span class="o">=</span> <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s">'submit'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">SearchResultsPageLocators</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">"""A class for search results locators. All search results locators should come here"""</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+
+<span class="post-date">
+  Written on
+  
+  February
+  12th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Selenium 面向页面（page object）&amp;url=/tech/page-object.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/page-object.html&amp;title=Selenium 面向页面（page object）" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/page-object.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

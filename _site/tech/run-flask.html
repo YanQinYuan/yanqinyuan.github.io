@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      MVP 开发指南——如何快速打造你的第一个 APP | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>MVP 开发指南——如何快速打造你的第一个 APP | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="MVP 开发指南——如何快速打造你的第一个 APP" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="人生最幸福的事是什么？" />
+<meta property="og:description" content="人生最幸福的事是什么？" />
+<link rel="canonical" href="http://localhost:4000/tech/run-flask.html" />
+<meta property="og:url" content="http://localhost:4000/tech/run-flask.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-19T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"人生最幸福的事是什么？","@type":"BlogPosting","headline":"MVP 开发指南——如何快速打造你的第一个 APP","dateModified":"2018-01-19T00:00:00+08:00","datePublished":"2018-01-19T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/run-flask.html"},"url":"http://localhost:4000/tech/run-flask.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  MVP 开发指南——如何快速打造你的第一个 APP
+</h1>
+
+
+
+<h2 id="人生最幸福的事是什么">人生最幸福的事是什么？</h2>
+
+<p>书架上是自己写的书，钱包里是自己赚的钱；出门逛街，对面大厦的海报是自己设计的海报；打开手机
+用着自己设计的 APP；没错，成为一名创作者，就是最幸福的事。</p>
+
+<p>此教程用于教六个月前的自己学编程，那时年纪尚浅，不懂如何上路…</p>
+
+<h2 id="如何做出好产品mvp">如何做出好产品——MVP</h2>
+
+<p>MVP,英文全称「Minimum viable product」，即最小可用产品。先有构思，再拆解业务。再逐一实现。</p>
+
+<blockquote>
+  <p>Development path from a minimum viable product to more complex product.</p>
+</blockquote>
+
+<p>从最小可用产品到复杂产品，一步一步来，比起闭门造车更可行，不易造成行为瘫痪与认知过载。</p>
+
+<h2 id="学习方法论">学习方法论</h2>
+<ul>
+  <li>学习新框架，直接看官方文档。先 QuickStart 敲一遍，熟悉关键参数。然后直接写代码。边写边学，不要只看不写。</li>
+  <li>遇到看不懂的报错信息，直接 Google</li>
+  <li>一个小时内 debug 不了的问题，过段时间再看，或者 issue 提问。（及时止损）</li>
+</ul>
+
+<h2 id="学会拆解问题">学会拆解问题</h2>
+
+<p>如何把大象塞进冰箱？</p>
+
+<ol>
+  <li>打开冰箱门</li>
+  <li>把大象推进去</li>
+  <li>关门</li>
+</ol>
+
+<p>把问题拆解成最小可行步骤，可有效解决行为瘫痪。我们经常会遇到「这个问题好难，无从下手」的尴尬，
+然后就放弃了。拆解问题，就像最小行动一样，一步一步实现目标。</p>
+
+<p>举个例子，假如你要把程序接入微信平台。</p>
+<ul>
+  <li>把应用部署在云服务器上
+    <ul>
+      <li>用什么部署
+        <ul>
+          <li>Nginx + Gunicorn + PostgreSQL 部署</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>准备接入微信的接口
+    <ul>
+      <li>用第三方库 wechatpy 协助开发接口
+        <ul>
+          <li>参照其提供的 Flask example 示例</li>
+          <li>重点查看 wechat( ) 函数</li>
+          <li>定义 wechat( ) 函数，修改相应配置</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>如何接入微信
+    <ul>
+      <li>阅读微信<strong>接口</strong>文档</li>
+      <li>使用 SDK 调用微信接口
+        <ul>
+          <li>借助第三方 SDK 库</li>
+        </ul>
+      </li>
+      <li>基本配置
+        <ul>
+          <li>开发者配置</li>
+          <li>服务器配置</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>参考：<a href="http://docs.wechatpy.org/zh_CN/master/">wechatpy</a></p>
+
+
+<span class="post-date">
+  Written on
+  
+  January
+  19th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=MVP 开发指南——如何快速打造你的第一个 APP&amp;url=/tech/run-flask.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/run-flask.html&amp;title=MVP 开发指南——如何快速打造你的第一个 APP" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/run-flask.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      python 文档测试 | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>python 文档测试 | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="python 文档测试" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="doctest 模块按照交互模式自动执行注释内容，以此测试测程序 ```python class Dict(dict): ‘’’  »&gt; d1 = Dict()  »&gt; d1.y = 200  »&gt; d1[‘y’] 200  »&gt; d2 = Dict(a=1, b=2, c=’3’)  »&gt; d2.c ‘3’ ‘’’ def init(self, kw): super(Dict, self).__init__(kw)" />
+<meta property="og:description" content="doctest 模块按照交互模式自动执行注释内容，以此测试测程序 ```python class Dict(dict): ‘’’  »&gt; d1 = Dict()  »&gt; d1.y = 200  »&gt; d1[‘y’] 200  »&gt; d2 = Dict(a=1, b=2, c=’3’)  »&gt; d2.c ‘3’ ‘’’ def init(self, kw): super(Dict, self).__init__(kw)" />
+<link rel="canonical" href="http://localhost:4000/tech/doc-test.html" />
+<meta property="og:url" content="http://localhost:4000/tech/doc-test.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-12T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"doctest 模块按照交互模式自动执行注释内容，以此测试测程序 ```python class Dict(dict): ‘’’  »&gt; d1 = Dict()  »&gt; d1.y = 200  »&gt; d1[‘y’] 200  »&gt; d2 = Dict(a=1, b=2, c=’3’)  »&gt; d2.c ‘3’ ‘’’ def init(self, kw): super(Dict, self).__init__(kw)","@type":"BlogPosting","headline":"python 文档测试","dateModified":"2018-02-12T00:00:00+08:00","datePublished":"2018-02-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/doc-test.html"},"url":"http://localhost:4000/tech/doc-test.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  python 文档测试
+</h1>
+
+
+
+<h2 id="doctest-模块按照交互模式自动执行注释内容以此测试测程序">doctest 模块按照交互模式自动执行注释内容，以此测试测程序</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dict</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="s">'''
+    &gt;&gt;&gt; d1 = Dict()
+    &gt;&gt;&gt; d1.y = 200
+    &gt;&gt;&gt; d1['y']
+    200
+    &gt;&gt;&gt; d2 = Dict(a=1, b=2, c='3')
+    &gt;&gt;&gt; d2.c
+    '3'
+    '''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Dict</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">AttributeError</span><span class="p">(</span><span class="s">r"'Dict' object has no attribute '</span><span class="si">%</span><span class="s">s'"</span> <span class="o">%</span> <span class="n">key</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">'__main__'</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c"># verbose 默认False，True 表示要啰嗦地打印出日志</span>
+</code></pre></div></div>
+
+<h2 id="以下是输出">以下是输出：</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Trying</span><span class="p">:</span>
+    <span class="n">d1</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">Expecting</span> <span class="n">nothing</span>
+<span class="n">ok</span>
+<span class="n">Trying</span><span class="p">:</span>
+    <span class="n">d1</span><span class="p">[</span><span class="s">'y'</span><span class="p">]</span>
+<span class="n">Expecting</span><span class="p">:</span>
+    <span class="mi">200</span>
+<span class="n">ok</span>
+<span class="n">Trying</span><span class="p">:</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="n">Dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s">'3'</span><span class="p">)</span>
+<span class="n">Expecting</span> <span class="n">nothing</span>
+<span class="n">ok</span>
+<span class="n">Trying</span><span class="p">:</span>
+    <span class="n">d2</span><span class="o">.</span><span class="n">c</span>
+<span class="n">Expecting</span><span class="p">:</span>
+    <span class="s">'3'</span>
+<span class="n">ok</span>
+<span class="n">Trying</span><span class="p">:</span>
+    <span class="n">d2</span><span class="p">[</span><span class="s">'empty'</span><span class="p">]</span>
+<span class="n">Expecting</span><span class="p">:</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+        <span class="o">...</span>
+    <span class="nb">KeyError</span><span class="p">:</span> <span class="s">'empty'</span>
+<span class="n">ok</span>
+<span class="n">Trying</span><span class="p">:</span>
+    <span class="n">d2</span><span class="o">.</span><span class="n">empty</span>
+<span class="n">Expecting</span><span class="p">:</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+        <span class="o">...</span>
+    <span class="nb">AttributeError</span><span class="p">:</span> <span class="s">'Dict'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s">'empty'</span>
+<span class="n">ok</span>
+<span class="mi">4</span> <span class="n">items</span> <span class="n">had</span> <span class="n">no</span> <span class="n">tests</span><span class="p">:</span>
+    <span class="n">__main__</span>
+    <span class="n">__main__</span><span class="o">.</span><span class="n">Dict</span><span class="o">.</span><span class="n">__getattr__</span>
+    <span class="n">__main__</span><span class="o">.</span><span class="n">Dict</span><span class="o">.</span><span class="n">__init__</span>
+    <span class="n">__main__</span><span class="o">.</span><span class="n">Dict</span><span class="o">.</span><span class="n">__setattr__</span>
+<span class="mi">1</span> <span class="n">items</span> <span class="n">passed</span> <span class="nb">all</span> <span class="n">tests</span><span class="p">:</span>
+   <span class="mi">9</span> <span class="n">tests</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">Dict</span>
+<span class="mi">9</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mi">5</span> <span class="n">items</span><span class="o">.</span>
+<span class="mi">9</span> <span class="n">passed</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">failed</span><span class="o">.</span>
+<span class="n">Test</span> <span class="n">passed</span><span class="o">.</span>
+</code></pre></div></div>
+
+
+<span class="post-date">
+  Written on
+  
+  February
+  12th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=python 文档测试&amp;url=/tech/doc-test.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/doc-test.html&amp;title=python 文档测试" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/doc-test.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

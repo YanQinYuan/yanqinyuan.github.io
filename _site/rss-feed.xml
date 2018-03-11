@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Nowhere</title>
+		<description>Blog</description>
+		<link></link>
+		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>静候那烟火</title>
+				
+				
+					<description>&lt;p&gt;空气中弥漫着树林和水的味道。夜色像一张黑色的网，笼罩在江面上。漫步江畔，耳闻远处小孩嬉戏打闹声，汽车鸣笛声，水流潺潺之音。江中望去，水流似乎比白天更急，像赶夜路的货车飞奔在高速路上，湍急的江水直奔下一个桥头，在桥墩下形成黑色的漩涡。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 05 Mar 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/literatrue/hanabi.html</link>
+				<guid isPermaLink="true">http://localhost:4000/literatrue/hanabi.html</guid>
+			</item>
+		
+			<item>
+				<title>高铁停运的警示</title>
+				
+				
+					<description>&lt;p&gt;当生活一点点侵蚀过来，你是觉察不到危机的。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 05 Mar 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/gaotie.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/gaotie.html</guid>
+			</item>
+		
+			<item>
+				<title>如何寻找到自己喜欢的事情</title>
+				
+				
+					<description>&lt;p&gt;有人问起，为什么你的兴趣这么多，读书，健身，摄影。我一般回答：不是我兴趣广泛，是你尝试得太少了。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 03 Mar 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/find-fav-job.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/find-fav-job.html</guid>
+			</item>
+		
+			<item>
+				<title>python 自动生成第二代居民身份证号码</title>
+				
+				
+					<description>&lt;p&gt;工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。
+~~~python
+import random&lt;br /&gt;
+import time
+def idcard_generator():&lt;br /&gt;
+    “”” 随机生成新的18为身份证号码 “””&lt;br /&gt;
+    ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2)&lt;br /&gt;
+    LAST = (‘1’, ‘0’, ‘X’, ‘9’, ‘8’, ‘7’, ‘6’, ‘5’, ‘4’, ‘3’, ‘2’)&lt;br /&gt;
+    t = time.localtime()[0]&lt;br /&gt;
+    x = ‘%02d%02d%02d%04d%02d%02d%03d’ % (random.randint(10, 99), random.randint(1, 99), random.randint(1, 99), random.randint(t - 80, t - 18), random.randint(1, 12), random.randint(1, 28), random.randint(1, 999))&lt;br /&gt;
+    y = 0&lt;br /&gt;
+    for i in range(17):&lt;br /&gt;
+        y += int(x[i]) * ARR[i]&lt;br /&gt;
+    IDCard = ‘%s%s’ % (x, LAST[y % 11])&lt;br /&gt;
+    # birthday = ‘%s-%s-%s 00:00:00’ % (IDCard[6:14][0:4], IDCard[6:14][4: 6], IDCard[6:14][6:8])&lt;br /&gt;
+    return IDCard&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 28 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/tech/random-id.html</link>
+				<guid isPermaLink="true">http://localhost:4000/tech/random-id.html</guid>
+			</item>
+		
+			<item>
+				<title>老有所依</title>
+				
+				
+					<description>&lt;blockquote&gt;
+  &lt;p&gt;脚趾死死抠住红泥&lt;br /&gt;
+头抵着树林&lt;br /&gt;
+为了在秋天和冬天让人回忆&lt;br /&gt;
+为了女儿的暗喜&lt;br /&gt;
+为了黎明寂寞而痛楚&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+				
+				<pubDate>Wed, 14 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/oldman.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/oldman.html</guid>
+			</item>
+		
+			<item>
+				<title>伞哭泣的日子</title>
+				
+				
+					<description>&lt;p&gt;水声潺潺&lt;br /&gt;
+月亮顺着瀑布而下&lt;br /&gt;
+倾倒在泉眼上&lt;br /&gt;
+金光洒满水面&lt;br /&gt;
+波光粼粼的金色碎片&lt;br /&gt;
+相互碰撞&lt;br /&gt;
+那是伞哭泣的声音&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 14 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/literatrue/kasa.html</link>
+				<guid isPermaLink="true">http://localhost:4000/literatrue/kasa.html</guid>
+			</item>
+		
+			<item>
+				<title>python 协程详解</title>
+				
+				
+					<description>
+</description>
+				
+				<pubDate>Tue, 13 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/python-Coroutine.html</link>
+				<guid isPermaLink="true">http://localhost:4000/python-Coroutine.html</guid>
+			</item>
+		
+			<item>
+				<title>python 修饰器</title>
+				
+				
+					<description>
+</description>
+				
+				<pubDate>Tue, 13 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/decorate-python.html</link>
+				<guid isPermaLink="true">http://localhost:4000/decorate-python.html</guid>
+			</item>
+		
+			<item>
+				<title>python 检测编码模块———chardet</title>
+				
+				
+					<description>&lt;h2 id=&quot;安装-chardet&quot;&gt;安装 chardet&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chardet&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;使用&quot;&gt;使用&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;chardet&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'人生苦短，我用 python'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gbk'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chardet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;detect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'encoding'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'GB2312'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'confidence'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7407407407407407&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'language'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Chinese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;## 其中 cinfidence 表示概率&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+				
+				<pubDate>Tue, 13 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/chardet.html</link>
+				<guid isPermaLink="true">http://localhost:4000/chardet.html</guid>
+			</item>
+		
+			<item>
+				<title>Selenium 面向页面（page object）</title>
+				
+				
+					<description>&lt;h2 id=&quot;面向页面编写测试用例的好处&quot;&gt;面向页面编写测试用例的好处&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;减少重复代码。&lt;/li&gt;
+  &lt;li&gt;如果页面变动，只需更改少部分代码，可维护性强。&lt;/li&gt;
+  &lt;li&gt;适合团队协作。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Mon, 12 Feb 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/tech/page-object.html</link>
+				<guid isPermaLink="true">http://localhost:4000/tech/page-object.html</guid>
+			</item>
+		
+	</channel>
+</rss>

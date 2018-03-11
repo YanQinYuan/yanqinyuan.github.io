@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      python 自动生成第二代居民身份证号码 | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>python 自动生成第二代居民身份证号码 | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="python 自动生成第二代居民身份证号码" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。 ~~~python import random import time def idcard_generator(): “”” 随机生成新的18为身份证号码 “”” ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2) LAST = (‘1’, ‘0’, ‘X’, ‘9’, ‘8’, ‘7’, ‘6’, ‘5’, ‘4’, ‘3’, ‘2’) t = time.localtime()[0] x = ‘%02d%02d%02d%04d%02d%02d%03d’ % (random.randint(10, 99), random.randint(1, 99), random.randint(1, 99), random.randint(t - 80, t - 18), random.randint(1, 12), random.randint(1, 28), random.randint(1, 999)) y = 0 for i in range(17): y += int(x[i]) * ARR[i] IDCard = ‘%s%s’ % (x, LAST[y % 11]) # birthday = ‘%s-%s-%s 00:00:00’ % (IDCard[6:14][0:4], IDCard[6:14][4: 6], IDCard[6:14][6:8]) return IDCard" />
+<meta property="og:description" content="工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。 ~~~python import random import time def idcard_generator(): “”” 随机生成新的18为身份证号码 “”” ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2) LAST = (‘1’, ‘0’, ‘X’, ‘9’, ‘8’, ‘7’, ‘6’, ‘5’, ‘4’, ‘3’, ‘2’) t = time.localtime()[0] x = ‘%02d%02d%02d%04d%02d%02d%03d’ % (random.randint(10, 99), random.randint(1, 99), random.randint(1, 99), random.randint(t - 80, t - 18), random.randint(1, 12), random.randint(1, 28), random.randint(1, 999)) y = 0 for i in range(17): y += int(x[i]) * ARR[i] IDCard = ‘%s%s’ % (x, LAST[y % 11]) # birthday = ‘%s-%s-%s 00:00:00’ % (IDCard[6:14][0:4], IDCard[6:14][4: 6], IDCard[6:14][6:8]) return IDCard" />
+<link rel="canonical" href="http://localhost:4000/tech/random-id.html" />
+<meta property="og:url" content="http://localhost:4000/tech/random-id.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-28T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。 ~~~python import random import time def idcard_generator(): “”” 随机生成新的18为身份证号码 “”” ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2) LAST = (‘1’, ‘0’, ‘X’, ‘9’, ‘8’, ‘7’, ‘6’, ‘5’, ‘4’, ‘3’, ‘2’) t = time.localtime()[0] x = ‘%02d%02d%02d%04d%02d%02d%03d’ % (random.randint(10, 99), random.randint(1, 99), random.randint(1, 99), random.randint(t - 80, t - 18), random.randint(1, 12), random.randint(1, 28), random.randint(1, 999)) y = 0 for i in range(17): y += int(x[i]) * ARR[i] IDCard = ‘%s%s’ % (x, LAST[y % 11]) # birthday = ‘%s-%s-%s 00:00:00’ % (IDCard[6:14][0:4], IDCard[6:14][4: 6], IDCard[6:14][6:8]) return IDCard","@type":"BlogPosting","headline":"python 自动生成第二代居民身份证号码","dateModified":"2018-02-28T00:00:00+08:00","datePublished":"2018-02-28T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech/random-id.html"},"url":"http://localhost:4000/tech/random-id.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  python 自动生成第二代居民身份证号码
+</h1>
+
+
+
+<p>工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>  
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="k">def</span> <span class="nf">idcard_generator</span><span class="p">():</span>  
+    <span class="s">""" 随机生成新的18为身份证号码 """</span>  
+    <span class="n">ARR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  
+    <span class="n">LAST</span> <span class="o">=</span> <span class="p">(</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'0'</span><span class="p">,</span> <span class="s">'X'</span><span class="p">,</span> <span class="s">'9'</span><span class="p">,</span> <span class="s">'8'</span><span class="p">,</span> <span class="s">'7'</span><span class="p">,</span> <span class="s">'6'</span><span class="p">,</span> <span class="s">'5'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'2'</span><span class="p">)</span>  
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>  
+    <span class="n">x</span> <span class="o">=</span> <span class="s">'</span><span class="si">%02</span><span class="s">d</span><span class="si">%02</span><span class="s">d</span><span class="si">%02</span><span class="s">d</span><span class="si">%04</span><span class="s">d</span><span class="si">%02</span><span class="s">d</span><span class="si">%02</span><span class="s">d</span><span class="si">%03</span><span class="s">d'</span> <span class="o">%</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="mi">80</span><span class="p">,</span> <span class="n">t</span> <span class="o">-</span> <span class="mi">18</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">999</span><span class="p">))</span>  
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>  
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">17</span><span class="p">):</span>  
+        <span class="n">y</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="n">ARR</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  
+    <span class="n">IDCard</span> <span class="o">=</span> <span class="s">'</span><span class="si">%</span><span class="s">s</span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">LAST</span><span class="p">[</span><span class="n">y</span> <span class="o">%</span> <span class="mi">11</span><span class="p">])</span>  
+    <span class="c"># birthday = '%s-%s-%s 00:00:00' % (IDCard[6:14][0:4], IDCard[6:14][4: 6], IDCard[6:14][6:8])  </span>
+    <span class="k">return</span> <span class="n">IDCard</span>  
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./file.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">idcard_generator</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>使用环境：python3<br />
+命令行输入：python rando_id.py<br />
+自动生成 file.txt 文件，打开即可看到生成的证件号</p>
+
+
+<span class="post-date">
+  Written on
+  
+  February
+  28th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=python 自动生成第二代居民身份证号码&amp;url=/tech/random-id.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/tech/random-id.html&amp;title=python 自动生成第二代居民身份证号码" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/tech/random-id.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

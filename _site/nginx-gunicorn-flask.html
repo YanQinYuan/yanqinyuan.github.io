@@ -1,0 +1,27 @@
+<h1 id="unbutu上-docker-部署-flask应用">unbutu上 docker 部署 flask应用</h1>
+
+<figure class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="c"># nginx-gunicorn-flask</span>
+<span class="k">FROM</span><span class="s"> ubuntu:12.04</span>
+<span class="k">MAINTAINER</span><span class="s"> yangqinyuan &lt;yqynowhere@foxmail.com&gt;</span>
+
+<span class="k">ENV</span><span class="s"> DEBIAN_FRONTEND noninteractive</span>
+
+<span class="k">RUN </span>apt-get update
+<span class="k">RUN </span>apt-get install <span class="nt">-y</span> python3 python-pip python-virtualenv nginx gunicorn supervisor
+
+<span class="c"># Setup flask application</span>
+<span class="k">RUN </span>mkdir <span class="nt">-p</span> /deploy/app
+<span class="k">COPY</span><span class="s"> app /deploy/app</span>
+<span class="k">RUN </span>pip install <span class="nt">-r</span> /deploy/app/requirements.txt
+<span class="c"># Setup nginx</span>
+<span class="k">RUN </span>rm /etc/nginx/sites-enabled/default
+<span class="k">COPY</span><span class="s"> flask.conf /etc/nginx/sites-available/</span>
+<span class="k">RUN </span>ln <span class="nt">-s</span> /etc/nginx/sites-available/flask.conf /etc/nginx/sites-enabled/flask.conf
+<span class="k">RUN </span><span class="nb">echo</span> <span class="s2">"daemon off;"</span> <span class="o">&gt;&gt;</span> /etc/nginx/nginx.conf
+<span class="c"># Setup supervisord</span>
+<span class="k">RUN </span>mkdir <span class="nt">-p</span> /var/log/supervisor
+<span class="k">COPY</span><span class="s"> supervisord.conf /etc/supervisor/conf.d/supervisord.conf</span>
+<span class="k">COPY</span><span class="s"> gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf</span>
+<span class="c"># Start processes</span>
+<span class="k">CMD</span><span class="s"> ["/usr/bin/supervisord"]</span></code></pre></figure>
+

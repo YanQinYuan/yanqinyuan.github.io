@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Nowhere | Blog
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Home | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Blog" />
+<meta property="og:description" content="Blog" />
+<link rel="canonical" href="http://localhost:4000/page6/" />
+<meta property="og:url" content="http://localhost:4000/page6/" />
+<meta property="og:site_name" content="Nowhere" />
+<link rel="prev" href="http://localhost:4000/page5" />
+<link rel="next" href="http://localhost:4000/page7" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"Blog","@type":"WebPage","headline":"Home","url":"http://localhost:4000/page6/","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      
+<div class="posts">
+  <h1>
+    <a href="/tech/shuttle.html">Mac 上好用的 ssh 工具——shuttle</a>
+  </h1>
+  
+  <p>
+    下载地址：shuttle
+
+下载后直接打开:设置——&gt;编辑，修改配置文件
+"hosts": [
+    {
+      "cmd": "ssh root@45.76.106.139",
+      "name": "SSH - vultr",
+      "inTerminal": "new",
+      "theme": "basic",
+    }
+  ]
+}
+// vultr 是我的云主机服务器
+
+
+对象包含字段有：
+
+
+  cmd: 需要执行的命令
+  name: 菜单名
+  inTerminal: 命令执行窗口模式（可选值：new, tab, current）
+  theme: 终端主题
+  title: 终端显示标题(缺失时使用name作为标题)
+
+ <a href="/tech/shuttle.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/nginx-gunicorn-flask.html">Nginx Gunicorn Flask</a>
+  </h1>
+  
+  <p>
+    unbutu上 docker 部署 flask应用
+
+# nginx-gunicorn-flask
+FROM ubuntu:12.04
+MAINTAINER yangqinyuan &lt;yqynowhere@foxmail.com&gt;
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update
+RUN apt-get install -y python3 python-pip python-virtualenv nginx gunicorn supervisor
+
+# Setup flask application
+RUN mkdir -p /deploy/app
+COPY app /deploy/app
+RUN pip in... <a href="/nginx-gunicorn-flask.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/git.html">极简 git 使用指南</a>
+  </h1>
+  
+  <p>
+    下载地址：git
+
+常用命令：
+git init //初始化新仓库
+git clone //复制一个仓库
+git add //添加文件或者目录到缓冲区
+git rm [file]//删除文件(仓库，缓冲，本地）
+git rm --cached [file] //
+git commit //版本提交
+git commit -a //自动版本提交（相当于add + commit）
+git status //查看当前状态（刚提交完是Clean，否则会列出cached和没有加入的文件清单
+git diff //查看上次提交后（包括缓冲）文件有什么变化
+git log //查看版本提交记录
+git reset --hard [版本号] //回滚到某个版本
+git reset --soft [版本... <a href="/tech/git.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/heroku.html">Heroku 部署 python 应用</a>
+  </h1>
+  
+  <p>
+    方法1：heroku cli 部署
+环境： macos
+
+下载 heroku cli
+
+heroku download 
+
+登录 heroku
+heroku login
+
+
+项目根目录创建 Procfile 文件，写入项目启动命令
+
+web: gunicorn -w 4 run:app
+
+
+用 gunicorn 测试是否能跑通
+gunicorn -w 4 run:app
+
+
+创建 Pipfile 文件，该文件指示程序依赖包
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+flask = "*"
+gunicorn = "*"
+psycopg2 = "*"
+requests = ... <a href="/tech/heroku.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 26 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/appium01.html">玩转 Appium</a>
+  </h1>
+  
+  <p>
+    安装
+windows 环境 :
+
+  npm
+  java 1.8
+  Android SDK
+
+
+接着安装 appium 服务端
+npm install -g appium
+
+
+下载 appium 客户端（这里选择 python 版本）
+
+pip install Appium-Python-Client
+
+
+检查安装是否成功
+
+appium-doctor
+
+使用
+
+启动
+
+appium
+
+
+代码实例
+
+import os
+from time import sleep
+
+import unittest
+
+from appium import webdriver
+
+# Returns abs path relative to this file and not cwd
+PATH = la... <a href="/tech/appium01.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 25 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  
+    <a class="pagination-button pagination-active" href="/page7" class="next">Older</a>
+  
+
+  
+    <a class="pagination-button pagination-active" href="/page5">Newer</a>
+  
+</div>
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>
