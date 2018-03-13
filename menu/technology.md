@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Attention is your only currency
+title: Attention is your only currency.
 ---
 <ul class="posts">
   {% for post in site.categories.tech %}

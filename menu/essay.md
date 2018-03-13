@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 随笔
+title: 记录生活
 ---
 <ul class="posts">
   {% for post in site.categories.essay %}
