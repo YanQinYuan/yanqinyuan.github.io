@@ -5,7 +5,7 @@ title: 返景入深林
 <ul class="posts">
   {% for post in site.categories.literatrue %}
     {% unless post.next %}
-      <!-- <h4>{{ post.date | date: '%Y' }}</h4> -->
+      <h3>{{ post.date | date: '%Y' }}</h3>
     {% else %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
