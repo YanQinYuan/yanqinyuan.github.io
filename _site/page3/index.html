@@ -105,21 +105,27 @@
       
 <div class="posts">
   <h1>
-    <a href="/tech/jupyter.html">jupyter FAQ</a>
+    <a href="/tech/sqlchemy-pg.html">解决生产测试环境数据库变量问题</a>
   </h1>
   
   <p>
-    Q1：忘记密码
+    系统环境：ubuntu/macos，python，virtualenv,flask
 
-jupyter notebook password
+把以下代码加入 bin/activate 文件中（或者 docker 的 启动文件里），在环境启动的时候加入系统变量
+
+export POSTGRES_URL="127.0.0.1:5432"
+export POSTGRES_USER="postgres"
+export POSTGRES_PW="dbpw"
+export POSTGRES_DB="test"
 
 
-Q2: Page not found
-
-pip install --upgrade jupyter
-
- <a href="/tech/jupyter.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 11 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+增加方法获取系统变量：
+def get_env_variable(name):
+    try:
+        return os.environ[name]
+    except KeyError:
+        message = "... <a href="/tech/sqlchemy-pg.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -133,25 +139,28 @@ pip install --upgrade jupyter
 
 <div class="posts">
   <h1>
-    <a href="/tech/class-python.html">python class 详解</a>
+    <a href="/essay/sports.html">当我运动的时候，我在想些什么</a>
   </h1>
   
   <p>
-    限制访问属性
+    入门
+「游泳健身了解一下吗？」
 
-实例的变量名如果以__开头，就变成了一个私有变量（private），只有内部可以访问，外部不能访问
-class MyObject(object):
-  def __init__(self, name, score):
-      self.__name = name
-      self.__name = score
+三百九十一天前，这个世界上最关心我的人————健身房销售，把我领进了健身房。
 
-操作对象信息
-几个方法：dir(), hasattr(),setattr(),getattr(),isinstance()
-dir("abc") # 列出str类所有的方法属性
-hasattr(MyObjcet,name) # 返回True or Not
-getattr(MyObject,name,400)# 如果没有则返回 default（400）
-s... <a href="/tech/class-python.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 11 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+在销售陪同下，伴随强劲的低音炮，汗水和气味，我们一同领略了这个另类的自虐基地。
+
+自此以后，隔天去健身房，春夏秋冬，从未间断。
+
+记得刚开始健身的时候正值冬天，每次练完后，汗水贴在身体上，顶着寒风跑回家。那种感觉就像一只刚打完鸡血的落汤鸡瑟瑟发抖地站在海边。
+
+那些日子，风很喧嚣。
+
+缘起
+四年前，生了一场病。那段时间一到晚上就发高烧，每晚都在医院的病房里打点滴。医院楼里，白色灯光照得昏昏欲睡，头随时要炸裂。福尔马林药水味充斥鼻腔。耳边只听见点滴「哒哒」滴落的声音，还有不知从哪传来的，痛苦而低沉的呻吟。
+
+持续高烧一个多月后，终于消停了。之后便开始跑步，每天十公里，绕着操场... <a href="/essay/sports.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -165,37 +174,36 @@ s... <a href="/tech/class-python.html">Read more</a>
 
 <div class="posts">
   <h1>
-    <a href="/essay/about-pm.html">如何回答有强烈价值观和感情色彩的问题</a>
+    <a href="/tech/shuttle.html">Mac 上好用的 ssh 工具——shuttle</a>
   </h1>
   
   <p>
-    人们为什么喜欢讨论争议性问题？
-刷知乎的时候难免会看到诸如：如何看待中医、如何看待转基因，如何看待罗永浩……
-等问题。点进去浏览的话不难发现：人们基本站成了两队，赞成派和反对派。他们或粉或黑，用各种数据，文字，修辞来抒发自己的
-情绪，营造自己的人设。
+    下载地址：shuttle
 
-佛系回答指南
-人在什么时候最容易陷入固执，最难跳出思维习惯模式？当他们回答争议性问题的时候。
-比如：彭于晏算不算强壮？如何看待小巴打车过时不候？你喜欢我什么？（滑稽脸）
-
-回答一般分两阵营：
-
-
-  彭于晏的肌肉在健身房只能算只瘦猴。
-
-
-好了好了，这位力量举/健美哥们你最强壮，下去吧。
+下载后直接打开:设置——&gt;编辑，修改配置文件
+"hosts": [
+    {
+      "cmd": "ssh root@45.76.106.139",
+      "name": "SSH - vultr",
+      "inTerminal": "new",
+      "theme": "basic",
+    }
+  ]
+}
+// vultr 是我的云主机服务器
 
 
-  他的块头已是普通人极限
+对象包含字段有：
 
 
-瘦弱限制了你的想象力。
+  cmd: 需要执行的命令
+  name: 菜单名
+  inTerminal: 命令执行窗口模式（可选值：new, tab, current）
+  theme: 终端主题
+  title: 终端显示标题(缺失时使用name作为标题)
 
-总之，人们总是站在自己的立场，企图驳斥对方，获得一些虚荣感。
-
-从更高的层次思考。（拓展... <a href="/essay/about-pm.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 09 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+ <a href="/tech/shuttle.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -209,19 +217,26 @@ s... <a href="/tech/class-python.html">Read more</a>
 
 <div class="posts">
   <h1>
-    <a href="/tech/appli-keybord.html">MAC 上完美兼容 windows 键盘</a>
+    <a href="/tech/git.html">极简 git 使用指南</a>
   </h1>
   
   <p>
-    
+    下载地址：git
 
-把 command 键和 option 键调换过来。
-
-再搭配 Karabiner ，把 Print Screen，Scrollock， Pause分别改成音量-，+和mute。
-
-下载地址：Karabiner
- <a href="/tech/appli-keybord.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 06 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+常用命令：
+git init //初始化新仓库
+git clone //复制一个仓库
+git add //添加文件或者目录到缓冲区
+git rm [file]//删除文件(仓库，缓冲，本地）
+git rm --cached [file] //
+git commit //版本提交
+git commit -a //自动版本提交（相当于add + commit）
+git status //查看当前状态（刚提交完是Clean，否则会列出cached和没有加入的文件清单
+git diff //查看上次提交后（包括缓冲）文件有什么变化
+git log //查看版本提交记录
+git reset --hard [版本号] //回滚到某个版本
+git reset --soft [版本... <a href="/tech/git.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -235,18 +250,241 @@ s... <a href="/tech/class-python.html">Read more</a>
 
 <div class="posts">
   <h1>
-    <a href="/tech/cross-origin.html">Cross origin requests are only supported for HTTP?</a>
+    <a href="/tech/heroku.html">Heroku 部署 python 应用</a>
   </h1>
   
   <p>
-    问题：浏览器不支持本地跨域请求
+    方法1：heroku cli 部署
+环境： macos
 
-解决方法：chrome 右键-&gt;属性-&gt;快捷方式处添加
+下载 heroku cli
 
---allow-file-access-from-files
+heroku download 
 
- <a href="/tech/cross-origin.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 05 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+登录 heroku
+heroku login
+
+
+项目根目录创建 Procfile 文件，写入项目启动命令
+
+web: gunicorn -w 4 run:app
+
+
+用 gunicorn 测试是否能跑通
+gunicorn -w 4 run:app
+
+
+创建 Pipfile 文件，该文件指示程序依赖包
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+flask = "*"
+gunicorn = "*"
+psycopg2 = "*"
+requests = ... <a href="/tech/heroku.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 26 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/appium01.html">玩转 Appium</a>
+  </h1>
+  
+  <p>
+    安装
+windows 环境 :
+
+  npm
+  java 1.8
+  Android SDK
+
+
+接着安装 appium 服务端
+npm install -g appium
+
+
+下载 appium 客户端（这里选择 python 版本）
+
+pip install Appium-Python-Client
+
+
+检查安装是否成功
+
+appium-doctor
+
+使用
+
+启动
+
+appium
+
+
+代码实例
+
+import os
+from time import sleep
+
+import unittest
+
+from appium import webdriver
+
+# Returns abs path relative to this file and not cwd
+PATH = la... <a href="/tech/appium01.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 25 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/pyenv.html">Pyenv 管理 Python 版本</a>
+  </h1>
+  
+  <p>
+    安装 pyenv
+
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+
+
+将 PYENV_ROOT 和 pyenv init 加入 bash的 ~/.bashrc
+
+echo 'export PATH=~/.pyenv/bin:$PATH' &gt;&gt; ~/.bashrc
+echo 'export PYENV_ROOT=~/.pyenv' &gt;&gt; ~/.bashrc
+echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bashrc
+
+下载 python 版本
+
+pyenv install 3.6.2
+
+
+安装 pyenv-virtualenv
+
+git clone https://g... <a href="/tech/pyenv.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/run-flask.html">MVP 开发指南——如何快速打造你的第一个 APP</a>
+  </h1>
+  
+  <p>
+    人生最幸福的事是什么？
+
+书架上是自己写的书，钱包里是自己赚的钱；出门逛街，对面大厦的海报是自己设计的海报；打开手机
+用着自己设计的 APP；没错，成为一名创作者，就是最幸福的事。
+
+此教程用于教六个月前的自己学编程，那时年纪尚浅，不懂如何上路…
+
+如何做出好产品——MVP
+
+MVP,英文全称「Minimum viable product」，即最小可用产品。先有构思，再拆解业务。再逐一实现。
+
+
+  Development path from a minimum viable product to more complex product.
+
+
+从最小可用产品到复杂产品，一步一步来，比起闭门造车更可行，不易造成行为瘫痪与认知过载。
+
+学习方法论
+
+  学习新框架，直接看官方文档。先 Q... <a href="/tech/run-flask.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/literatrue/longnight.html">夏夜</a>
+  </h1>
+  
+  <p>
+    1
+巷子里传来敲击玻璃的声音，「咚咚」，声音沿着布满青苔的围墙，穿过漆黑夜色，像声诉，像吟泣。
+今晚没有月亮，没有星星，没有鸟鸣，没有犬吠，仿佛是约好了一样，所有生物都缄默不语，只有这「咚咚」声
+在传达着什么。
+
+2
+男人疾步走在田野上，裤脚沾满了溅起的泥土，条纹衬衫早已湿透。他停了下来，手背在额头擦汗，犹豫了一下，继续往前走。前面村子里闪烁的灯光，像爬满山坡的萤火虫闪烁其间。他朝着心里的那只萤火虫奔去。
+
+「铃铃铃」，手机铃声响了起来，撕裂了沉默的夜，在空旷山野上回响。是儿子的来电。
+
+「喂，」
+
+「爸爸你车的钥匙在哪？妈妈反锁在车里了！」电话那头传来焦急的询问，还有翻箱倒柜的碰撞声。
+
+「自己找去。」
+
+「我找不到啊，找遍了柜子都没有！」儿子快哭出声。
+
+「在一楼靠近前门的墙上挂着... <a href="/literatrue/longnight.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 18 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/robotFQA.html">robotframework--FAQ</a>
+  </h1>
+  
+  <p>
+    Q: disconnected: unable to connect to renderer
+
+解决方法：
+下载最新的chromedriver
+
+Q：定位不到元素？
+
+
+  换其它定位方法，首选 css，速度快，稳定。
+  元素是否在对应 iframe 里，如果没有，unselect iframe，select iframe
+  加入等待时间
+
+ <a href="/tech/robotFQA.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 13 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read

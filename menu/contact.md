@@ -23,3 +23,4 @@ title: 关于我
 微信：waitforme318  
 豆瓣：[豆瓣](https://www.douban.com/people/PYnowhereman/)  
 知乎：[知乎](https://www.zhihu.com/people/yang-nowhere-Razor/activities)
+微博：[微博](https://www.weibo.com/2094895362/profile?topnav=1&wvr=6&is_all=1)

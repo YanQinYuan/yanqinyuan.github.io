@@ -54,7 +54,6 @@
 <meta property="og:url" content="http://localhost:4000/page5/" />
 <meta property="og:site_name" content="Nowhere" />
 <link rel="prev" href="http://localhost:4000/page4" />
-<link rel="next" href="http://localhost:4000/page6" />
 <script type="application/ld+json">
 {"author":{"@type":"Person","name":"YangQinYuan"},"description":"Blog","@type":"WebPage","headline":"Home","url":"http://localhost:4000/page5/","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
@@ -105,134 +104,30 @@
       
 <div class="posts">
   <h1>
-    <a href="/tech/git.html">极简 git 使用指南</a>
+    <a href="/tech/pict.html">PICT 轻松编写组合测试用例</a>
   </h1>
   
   <p>
-    下载地址：git
+    PICT 介绍
 
-常用命令：
-git init //初始化新仓库
-git clone //复制一个仓库
-git add //添加文件或者目录到缓冲区
-git rm [file]//删除文件(仓库，缓冲，本地）
-git rm --cached [file] //
-git commit //版本提交
-git commit -a //自动版本提交（相当于add + commit）
-git status //查看当前状态（刚提交完是Clean，否则会列出cached和没有加入的文件清单
-git diff //查看上次提交后（包括缓冲）文件有什么变化
-git log //查看版本提交记录
-git reset --hard [版本号] //回滚到某个版本
-git reset --soft [版本... <a href="/tech/git.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
-  
+来自官网：
 
 
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/tech/heroku.html">Heroku 部署 python 应用</a>
-  </h1>
-  
-  <p>
-    方法1：heroku cli 部署
-环境： macos
-
-下载 heroku cli
-
-heroku download 
-
-登录 heroku
-heroku login
+  PICT generates test cases and test configurations. With PICT, you can generate tests that are more effective than manually generated tests and in a fraction of the time required by hands-on test case design.
 
 
-项目根目录创建 Procfile 文件，写入项目启动命令
-
-web: gunicorn -w 4 run:app
-
-
-用 gunicorn 测试是否能跑通
-gunicorn -w 4 run:app
-
-
-创建 Pipfile 文件，该文件指示程序依赖包
-[[source]]
-url = "https://pypi.python.org/simple"
-verify_ssl = true
-
-[packages]
-flask = "*"
-gunicorn = "*"
-psycopg2 = "*"
-requests = ... <a href="/tech/heroku.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 26 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/tech/appium01.html">玩转 Appium</a>
-  </h1>
-  
-  <p>
-    安装
-windows 环境 :
-
-  npm
-  java 1.8
-  Android SDK
-
-
-接着安装 appium 服务端
-npm install -g appium
-
-
-下载 appium 客户端（这里选择 python 版本）
-
-pip install Appium-Python-Client
-
-
-检查安装是否成功
-
-appium-doctor
+PICT 是一个帮你自动生成测试用例的小工具，只需要你输入规则，它会帮你生成用例。
 
 使用
 
-启动
+第一步，准备 model.txt
 
-appium
-
-
-代码实例
-
-import os
-from time import sleep
-
-import unittest
-
-from appium import webdriver
-
-# Returns abs path relative to this file and not cwd
-PATH = la... <a href="/tech/appium01.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 25 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+#
+# This is a sample model for testing volume create/... <a href="/tech/pict.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 08 Aug 2017 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
-    less than 1 minute read
+    1 minute read
   
 
 
@@ -243,68 +138,14 @@ PATH = la... <a href="/tech/appium01.html">Read more</a>
 
 <div class="posts">
   <h1>
-    <a href="/tech/pyenv.html">Pyenv 管理 Python 版本</a>
+    <a href="/photo/nanjing.html">南京——花谢花开花满天</a>
   </h1>
   
   <p>
-    安装 pyenv
+    摄于南京植物园
 
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-
-
-将 PYENV_ROOT 和 pyenv init 加入 bash的 ~/.bashrc
-
-echo 'export PATH=~/.pyenv/bin:$PATH' &gt;&gt; ~/.bashrc
-echo 'export PYENV_ROOT=~/.pyenv' &gt;&gt; ~/.bashrc
-echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bashrc
-
-下载 python 版本
-
-pyenv install 3.6.2
-
-
-安装 pyenv-virtualenv
-
-git clone https://g... <a href="/tech/pyenv.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/tech/run-flask.html">MVP 开发指南——如何快速打造你的第一个 APP</a>
-  </h1>
-  
-  <p>
-    人生最幸福的事是什么？
-
-书架上是自己写的书，钱包里是自己赚的钱；出门逛街，对面大厦的海报是自己设计的海报；打开手机
-用着自己设计的 APP；没错，成为一名创作者，就是最幸福的事。
-
-此教程用于教六个月前的自己学编程，那时年纪尚浅，不懂如何上路…
-
-如何做出好产品——MVP
-
-MVP,英文全称「Minimum viable product」，即最小可用产品。先有构思，再拆解业务。再逐一实现。
-
-
-  Development path from a minimum viable product to more complex product.
-
-
-从最小可用产品到复杂产品，一步一步来，比起闭门造车更可行，不易造成行为瘫痪与认知过载。
-
-学习方法论
-
-  学习新框架，直接看官方文档。先 Q... <a href="/tech/run-flask.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+ <a href="/photo/nanjing.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 29 Mar 2017 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -320,7 +161,7 @@ MVP,英文全称「Minimum viable product」，即最小可用产品。先有构
 <!-- Pagination links -->
 <div class="pagination">
   
-    <a class="pagination-button pagination-active" href="/page6" class="next">Older</a>
+    <span class="pagination-button">Older</span>
   
 
   
