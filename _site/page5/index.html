@@ -54,6 +54,7 @@
 <meta property="og:url" content="http://localhost:4000/page5/" />
 <meta property="og:site_name" content="Nowhere" />
 <link rel="prev" href="http://localhost:4000/page4" />
+<link rel="next" href="http://localhost:4000/page6" />
 <script type="application/ld+json">
 {"author":{"@type":"Person","name":"YangQinYuan"},"description":"Blog","@type":"WebPage","headline":"Home","url":"http://localhost:4000/page5/","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
@@ -104,30 +105,26 @@
       
 <div class="posts">
   <h1>
-    <a href="/tech/pict.html">PICT 轻松编写组合测试用例</a>
+    <a href="/essay/positive-sum-game.html">正和博弈</a>
   </h1>
   
   <p>
-    PICT 介绍
+    1
+正和博弈论是博弈论中的一种理论，又称合作博弈。是指一些参与者以联盟、互相合作进行的博弈。这样一来博弈活动就变成了不同集团之间的对抗。合作博弈的相反是非合作博弈。
 
-来自官网：
+正和博弈导致的结果往往是共赢。
 
+用在市场中，正和博弈即 dt&gt;0。t 代表交易。有交易才有财富，财富产自交易。交易是典型的正和博弈。例如，我有一台旧电脑，而你正好需要一台电脑，我们低价成交。这时你拥有生产工具，而我也有了资金，两全其美。
 
-  PICT generates test cases and test configurations. With PICT, you can generate tests that are more effective than manually generated tests and in a fraction of the time required by hands-on test case design.
+也许你会问，如果我用假钞交易呢？如果我卖的电脑有暗病没有告诉对方？这时只有一方获利丰厚，另一方损失。这是零和博弈。
 
+零和博弈则与正和博弈相反，即一方有所得，其他方必有所失。其导致结果一般是：一方胜利，一方失败。
 
-PICT 是一个帮你自动生成测试用例的小工具，只需要你输入规则，它会帮你生成用例。
-
-使用
-
-第一步，准备 model.txt
-
-#
-# This is a sample model for testing volume create/... <a href="/tech/pict.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 08 Aug 2017 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+负和博弈则是损人又害己。例如我用假钞买了你的坏电脑，结果两人都... <a href="/essay/positive-sum-game.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 31 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
-    1 minute read
+    less than 1 minute read
   
 
 
@@ -138,14 +135,138 @@ PICT 是一个帮你自动生成测试用例的小工具，只需要你输入规
 
 <div class="posts">
   <h1>
-    <a href="/photo/nanjing.html">南京——花谢花开花满天</a>
+    <a href="/tech/sqlchemy-pg.html">解决生产测试环境数据库变量问题</a>
   </h1>
   
   <p>
-    摄于南京植物园
+    系统环境：ubuntu/macos，python，virtualenv,flask
 
- <a href="/photo/nanjing.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 29 Mar 2017 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+把以下代码加入 bin/activate 文件中（或者 docker 的 启动文件里），在环境启动的时候加入系统变量
+
+export POSTGRES_URL="127.0.0.1:5432"
+export POSTGRES_USER="postgres"
+export POSTGRES_PW="dbpw"
+export POSTGRES_DB="test"
+
+
+增加方法获取系统变量：
+def get_env_variable(name):
+    try:
+        return os.environ[name]
+    except KeyError:
+        message = "... <a href="/tech/sqlchemy-pg.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/essay/sports.html">当我运动的时候，我在想些什么</a>
+  </h1>
+  
+  <p>
+    入门
+「游泳健身了解一下吗？」
+
+三百九十一天前，这个世界上最关心我的人————健身房销售，把我领进了健身房。
+
+在销售陪同下，伴随强劲的低音炮，汗水和气味，我们一同领略了这个另类的自虐基地。
+
+自此以后，隔天去健身房，春夏秋冬，从未间断。
+
+记得刚开始健身的时候正值冬天，每次练完后，汗水贴在身体上，顶着寒风跑回家。那种感觉就像一只刚打完鸡血的落汤鸡瑟瑟发抖地站在海边。
+
+那些日子，风很喧嚣。
+
+缘起
+四年前，生了一场病。那段时间一到晚上就发高烧，每晚都在医院的病房里打点滴。医院楼里，白色灯光照得昏昏欲睡，头随时要炸裂。福尔马林药水味充斥鼻腔。耳边只听见点滴「哒哒」滴落的声音，还有不知从哪传来的，痛苦而低沉的呻吟。
+
+持续高烧一个多月后，终于消停了。之后便开始跑步，每天十公里，绕着操场... <a href="/essay/sports.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/shuttle.html">Mac 上好用的 ssh 工具——shuttle</a>
+  </h1>
+  
+  <p>
+    下载地址：shuttle
+
+下载后直接打开:设置——&gt;编辑，修改配置文件
+"hosts": [
+    {
+      "cmd": "ssh root@45.76.106.139",
+      "name": "SSH - vultr",
+      "inTerminal": "new",
+      "theme": "basic",
+    }
+  ]
+}
+// vultr 是我的云主机服务器
+
+
+对象包含字段有：
+
+
+  cmd: 需要执行的命令
+  name: 菜单名
+  inTerminal: 命令执行窗口模式（可选值：new, tab, current）
+  theme: 终端主题
+  title: 终端显示标题(缺失时使用name作为标题)
+
+ <a href="/tech/shuttle.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
+    <a href="/tech/git.html">极简 git 使用指南</a>
+  </h1>
+  
+  <p>
+    下载地址：git
+
+常用命令：
+git init //初始化新仓库
+git clone //复制一个仓库
+git add //添加文件或者目录到缓冲区
+git rm [file]//删除文件(仓库，缓冲，本地）
+git rm --cached [file] //
+git commit //版本提交
+git commit -a //自动版本提交（相当于add + commit）
+git status //查看当前状态（刚提交完是Clean，否则会列出cached和没有加入的文件清单
+git diff //查看上次提交后（包括缓冲）文件有什么变化
+git log //查看版本提交记录
+git reset --hard [版本号] //回滚到某个版本
+git reset --soft [版本... <a href="/tech/git.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
@@ -161,7 +282,7 @@ PICT 是一个帮你自动生成测试用例的小工具，只需要你输入规
 <!-- Pagination links -->
 <div class="pagination">
   
-    <span class="pagination-button">Older</span>
+    <a class="pagination-button pagination-active" href="/page6" class="next">Older</a>
   
 
   

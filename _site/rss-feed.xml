@@ -7,6 +7,19 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>中年健身指南</title>
+				
+				
+					<description>&lt;p&gt;要想在中年的时候依然有一副好身体，健身不可少。那么，要如何科学地健身？&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 27 Mar 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/gym.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/gym.html</guid>
+			</item>
+		
+			<item>
 				<title>你认知失调了吗？</title>
 				
 				
@@ -14,7 +27,7 @@
 
 </description>
 				
-				<pubDate>Sun, 18 Mar 2018 00:00:00 +0800</pubDate>
+				<pubDate>Thu, 22 Mar 2018 00:00:00 +0800</pubDate>
 				<link>http://localhost:4000/essay/self-identity.html</link>
 				<guid isPermaLink="true">http://localhost:4000/essay/self-identity.html</guid>
 			</item>
@@ -138,27 +151,6 @@ import xlwt&lt;/p&gt;
 				<pubDate>Wed, 14 Feb 2018 00:00:00 +0800</pubDate>
 				<link>http://localhost:4000/literatrue/kasa.html</link>
 				<guid isPermaLink="true">http://localhost:4000/literatrue/kasa.html</guid>
-			</item>
-		
-			<item>
-				<title>python 检测编码模块———chardet</title>
-				
-				
-					<description>&lt;h2 id=&quot;安装-chardet&quot;&gt;安装 chardet&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chardet&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;使用&quot;&gt;使用&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;chardet&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'人生苦短，我用 python'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gbk'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chardet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;detect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'encoding'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'GB2312'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'confidence'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7407407407407407&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'language'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Chinese'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;## 其中 cinfidence 表示概率&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-				
-				<pubDate>Tue, 13 Feb 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/chardet.html</link>
-				<guid isPermaLink="true">http://localhost:4000/chardet.html</guid>
 			</item>
 		
 	</channel>

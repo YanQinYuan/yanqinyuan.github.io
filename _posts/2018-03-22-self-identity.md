@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "你认知失调了吗？"
-date: 2018-03-18
+date: 2018-03-22
 categories: essay
 image: zebra.jpg
 ---
