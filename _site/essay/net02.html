@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      网络科学初探 | Nowhere
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Nowhere" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="Nowhere | Blog"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>网络科学初探 | Nowhere</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="网络科学初探" />
+<meta name="author" content="YangQinYuan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="最近翻阅了不少关于网络科学的书籍和视频，包括《网络、群体与市场》，《隐秩序》，《失控》，《大自然如何工作》，《链接：网络新科学》等，还有 coursa 上面的「复杂科学课程」。这是一门复杂而迷人的新兴学科，其研究基于计算机模拟和数学模型。但许多术语翻译成中文后难以准确表达其精髓，陷入「知识的诅咒」。此文借此一探网络科学中的几个关键模型和其相关思想，顺带讨论其更优美的中文表达。" />
+<meta property="og:description" content="最近翻阅了不少关于网络科学的书籍和视频，包括《网络、群体与市场》，《隐秩序》，《失控》，《大自然如何工作》，《链接：网络新科学》等，还有 coursa 上面的「复杂科学课程」。这是一门复杂而迷人的新兴学科，其研究基于计算机模拟和数学模型。但许多术语翻译成中文后难以准确表达其精髓，陷入「知识的诅咒」。此文借此一探网络科学中的几个关键模型和其相关思想，顺带讨论其更优美的中文表达。" />
+<link rel="canonical" href="http://localhost:4000/essay/net02.html" />
+<meta property="og:url" content="http://localhost:4000/essay/net02.html" />
+<meta property="og:site_name" content="Nowhere" />
+<meta property="og:image" content="http://localhost:4000/zebra.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-20T00:00:00+08:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"YangQinYuan"},"description":"最近翻阅了不少关于网络科学的书籍和视频，包括《网络、群体与市场》，《隐秩序》，《失控》，《大自然如何工作》，《链接：网络新科学》等，还有 coursa 上面的「复杂科学课程」。这是一门复杂而迷人的新兴学科，其研究基于计算机模拟和数学模型。但许多术语翻译成中文后难以准确表达其精髓，陷入「知识的诅咒」。此文借此一探网络科学中的几个关键模型和其相关思想，顺带讨论其更优美的中文表达。","@type":"BlogPosting","headline":"网络科学初探","dateModified":"2018-04-20T00:00:00+08:00","datePublished":"2018-04-20T00:00:00+08:00","image":"http://localhost:4000/zebra.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/essay/net02.html"},"url":"http://localhost:4000/essay/net02.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">Nowhere</a>
+    <small class="masthead-subtitle">Blog</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/story.html">故事</a>
+    
+      <a href="/menu/essay.html">随笔</a>
+    
+      <a href="/menu/technology.html">技术</a>
+    
+      <a href="/menu/contact.html">联系</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/yangqinyuan_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  网络科学初探
+</h1>
+
+
+  <img src="/assets/img/zebra.jpg">
+
+
+<p>最近翻阅了不少关于网络科学的书籍和视频，包括《网络、群体与市场》，《隐秩序》，《失控》，《大自然如何工作》，《链接：网络新科学》等，还有 coursa 上面的「复杂科学课程」。这是一门复杂而迷人的新兴学科，其研究基于计算机模拟和数学模型。但许多术语翻译成中文后难以准确表达其精髓，陷入「知识的诅咒」。此文借此一探网络科学中的几个关键模型和其相关思想，顺带讨论其更优美的中文表达。</p>
+
+<h2 id="什么是网络科学">什么是网络科学？</h2>
+
+<blockquote>
+  <p>维基百科上定义：网络科学是从交叉学科研究成长起来的一个新兴的学术领域。致力于研究复杂网络的性质，并且应用这些性质去研究一些具有网络特点的领域，比如信息技术网络，计算机网络，生物圈网络，学习和认知网络，社会关系网络以及经济和金融网络。这个领域以数学中的图论为理论基础，从物理中的统计力学，计算机科学中的数据挖掘和信息可视化，统计学中的推断建模，以及社会学和经济学中的社会结构理论等学科和分之中汲取方法论营养。美国国家科研委员会（National Research Council）将网络科学定义为“研究物理，生物，和社会现象的网络化表达，建立针对这些象限具有预测效果的模型”的学科。</p>
+  <ul>
+    <li><a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E7%A7%91%E5%AD%A6">网络科学</a></li>
+  </ul>
+</blockquote>
+
+<p>简单说来就是，网络科学是为各类具备网络结构的系统建模，并研究其规律的学科。</p>
+
+<h2 id="网络科学的术语">网络科学的术语</h2>
+
+<h3 id="复杂网络">复杂网络</h3>
+<p>网络分为简单网络和复杂网络。一个班级的几十位同学可以组成一个简单网络，每个同学占据一个<strong>节点</strong>，同学之间的关系称为<strong>连接</strong>。这种少量节点与线组成的网络叫做<strong>简单网络</strong>。复杂网络则是由很多节点连接起来的网络，比如一个国家人口组成复杂网络，或者互联网站点的复杂网络。</p>
+
+<p>如何才能称为简单，如何才能称为复杂？多少粒沙子合在一起才能称为一堆沙？阈值是多少？</p>
+
+<h3 id="自组织临界">自组织临界</h3>
+<p>自组织的意思是，一个系统会自发形成「稳定有序的层级结构」。</p>
+
+<p>该理论认为，由大量相互作用成分组成的系统会自然地向自组织临界态发展；当系统达到自组织临界态时，即使小的干扰事件也可引起系统发生一系列灾变。</p>
+
+<p>该理论提出者做了一个沙堆实验：他们让沙子一粒一粒落在桌上，形成逐渐增高的一小堆，借助计算机模拟精确地计算每在沙堆顶部落置一粒沙会连带多少沙粒移动； 初始阶段，落下的沙粒对沙堆整体影响很小； 然而当沙堆增高到一定程度，落下一粒沙却可能导致整个沙堆发生坍塌。</p>
+
+<p>他们解释道：</p>
+
+<blockquote>
+  <p>沙堆一达到“临界”状态，每粒沙与其他沙粒就处于“一体性”接触，那时每粒新落下的沙都会产生一种 “力波”，尽管微细，却有可能贯穿沙堆整体，把碰撞次第传给所有沙粒，导致沙堆发生整体性的连锁改变或重新组合； 沙堆的结构将随每粒新沙落下而变得脆弱，最终发生结构性失衡——坍塌。临界态时，沙崩规模的大小与其出现的频率呈幂函数关系。</p>
+</blockquote>
+
+<p>所谓“自组织”是指该状态的形成主要是由系统内部组织间的相互作用产生，而不是由任何外界因素控制或主导所致。所谓“临界态”是指系统处于一种特殊敏感状态，微小的局部变化可以不断放大、扩延至整个系统。也就是说，系统在临界态时，其所有成分的行为都相互关联。临界态概念与“相变”密切联系；相变是由量变到质变的过程，而临界态正是系统转变时刻的特征。</p>
+
+<p>自组织临界还具备以下几种特征：</p>
+
+<ul>
+  <li>无标度：很小的扰动也会引起系统全方位的响应。</li>
+  <li>幂律分布：系统在空间和时间上都出现幂律分布时才能认为系统达到了临界态。</li>
+  <li>开放系统：自组织系统与外界系统交换能量</li>
+  <li>鲁棒性（健壮性）：在外界系统的影响下，能够在一定程度内维持系统的特征。</li>
+</ul>
+
+<h3 id="涌现">涌现</h3>
+
+<p>涌现这个词含义比较模糊，你就当作是火山爆发一样，突然喷出很多岩浆。涌现是在自我组织的过程中，所产生的各种新奇且清晰的结构、图案和特性。例如大脑神经元：大量神经元以某种自组织的方式形成大脑，然后大脑的功能就「涌现」出来了。</p>
+
+<h3 id="弱联系与强联系">弱联系与强联系</h3>
+<p>指网络中节点与节点间的联系强弱。强联系，表示紧密和频繁的节点连接。弱联系，表示比较偶然和少有的节点连接。</p>
+
+<h3 id="结构洞">结构洞</h3>
+<p>如图，图中如果没有B节点，则该网络会分成三个<strong>连通分量</strong>。</p>
+
+<p><img src="http://p6ngk1zul.bkt.clouddn.com/a%E5%92%8Cb%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E7%A4%BE%E4%BC%9A%E8%B5%84%E6%9C%AC.jpg" alt="结构洞" /></p>
+
+<p>A 要联系 C ，则必须通过 B。如果两者之间缺少直接的联系，而必须通过第三者才能形成联系，那么行动的第三者就在关系网络中占据了一个结构洞，显然，结构洞是针对于第三者而言。</p>
+
+<p>因此，个人在网络的位置比关系的强弱更为重要，其在网络中的位置决定了个人的信息、资源与权力。因此，不管关系强弱，如果存在结构洞，那么将没有直接联系的两个行动者联系起来的第三者拥有信息优势和控制优势，这样能够为自己提供更多的资源和回报。因此，个人或组织要想在竞争中保持优势，就必须建立广泛的联系，同时占据更多的结构洞，掌握更多信息。</p>
+
+<h3 id="小世界网络六度分隔">小世界网络（六度分隔）</h3>
+<p>小世界网络中大部分的结点不与彼此邻接，但大部分结点可以从任一其他点经少数几步就可到达。若将一个小世界网络中的点代表一个人，而连结线代表人与人认识，则这小世界网络可以反映陌生人由彼此共同认识的人而连结的小世界现象。</p>
+
+<p>关于小世界模型有个有趣的结论，也就是著名的「六度分隔」理论。你和任何一个陌生人之间所间隔的人不会超过六个，也就是说，最多通过六个人你就能够认识任何一个陌生人。
+<img src="http://p6ngk1zul.bkt.clouddn.com/image_thumb2.png" alt="六度分隔" /></p>
+<h3 id="无标度网络">无标度网络</h3>
+<p>无标度网络具有严重的异质性，其各节点之间的连接状况（度数）具有严重的不均匀分布性：网络中少数称之为Hub点的节点拥有极其多的连接，而大多数节点只有很少量的连接。少数Hub点对无标度网络的运行起着主导的作用。从广义上说，无标度网络的无标度性是描述大量复杂系统整体上严重不均匀分布的一种内在性质。</p>
+
+<p>无标度网络的形成：</p>
+
+<p><img src="http://p6ngk1zul.bkt.clouddn.com/image_thumb3.png" alt="无标度网络的形成" /></p>
+<h3 id="随机网络">随机网络</h3>
+<p>尽管连接是随机设置的，但大部分节点的连接数目会大致相同，即节点的分布方式遵循钟形的泊松分布，有一个特征性的「平均数」。连接数目比平均数高许多或低许多的节点都极少，随着连接数的增大，其概率呈指数迅速递减。故随机网络亦称指数网络。</p>
+
+<p><img src="http://img.socialbeta.com/wp/2010/05/image_thumb4.png" alt="随机网络" /></p>
+
+<p>随机网络与无标度网络分布对比：
+<img src="http://p6ngk1zul.bkt.clouddn.com/image_thumb5.png" alt="随机网络与无标度网络分布对比" /></p>
+
+
+
+<span class="post-date">
+  Written on
+  
+  April
+  20th,
+  2018
+  by
+  
+    YangQinYuan
+  
+</span>
+
+<div class="post-date"></div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=网络科学初探&amp;url=/essay/net02.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/essay/net02.html&amp;title=网络科学初探" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/essay/net02.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 ></h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/yanqinyuan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="https://twitter.com/yangqinyuan_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:yqynowhere@foxmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">Nowhere | Blog by YangQinYuan</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

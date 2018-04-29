@@ -7,6 +7,87 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>投资风格</title>
+				
+				
+					<description>&lt;h2 id=&quot;最近&quot;&gt;最近&lt;/h2&gt;
+&lt;p&gt;2018年入手两支股票，1/10仓位。买入之前看了财报，较为详细地分析了市盈率，觉得价格被低估，于是入仓，如今跌了大概 7%。当然，从市盈率等账面数据上看，以后会涨起来。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/play.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/play.html</guid>
+			</item>
+		
+			<item>
+				<title>比特币与群体投机</title>
+				
+				
+					<description>&lt;h2 id=&quot;比特币&quot;&gt;比特币&lt;/h2&gt;
+&lt;p&gt;比特币其实早在十几年前已经存在，之前一直不温不火，但是在 2017 年引来一波「炒币」狂潮。受其影响，其他币种如「以太坊」、「EOS」都引来一波又一波狂涨与暴跌。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 25 Apr 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/bitcon.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/bitcon.html</guid>
+			</item>
+		
+			<item>
+				<title>网络科学初探</title>
+				
+				
+					<description>&lt;p&gt;最近翻阅了不少关于网络科学的书籍和视频，包括《网络、群体与市场》，《隐秩序》，《失控》，《大自然如何工作》，《链接：网络新科学》等，还有 coursa 上面的「复杂科学课程」。这是一门复杂而迷人的新兴学科，其研究基于计算机模拟和数学模型。但许多术语翻译成中文后难以准确表达其精髓，陷入「知识的诅咒」。此文借此一探网络科学中的几个关键模型和其相关思想，顺带讨论其更优美的中文表达。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Fri, 20 Apr 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/net02.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/net02.html</guid>
+			</item>
+		
+			<item>
+				<title>高效决策法——简捷启发式</title>
+				
+				
+					<description>&lt;p&gt;相亲市场上，面对琳琅满目的「对象」，你感觉无从下手；职场上，面对两份工作邀约，你焦头烂额；超市里的同类商品你挑了又挑，不知如何选择。生活处处充满了需要你决策的时刻：结婚买房，去哪吃饭，去看什么电影等等。从理性的角度出发，有没有高效的决策方法呢？《简捷启发式》告诉你，答案是有的。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 17 Apr 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/simple.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/simple.html</guid>
+			</item>
+		
+			<item>
+				<title>改变的艺术</title>
+				
+				
+					<description>&lt;h2 id=&quot;第二序改变&quot;&gt;第二序改变&lt;/h2&gt;
+&lt;p&gt;上周末读完了瓦茨拉维克的《改变——问题形成和解决的原则》，受益匪浅。这本书是行动科学的开山之作，作者把数学原理中群论和逻辑类型理论与人类行为学结合，最终诞生一门新学科——行动科学。由此可见，创新往往诞生于不同领域之结合。生命也如此，两个人从素不相识、互相看不上眼到相互结合，最终诞生新的生命。自然界的法则都有异曲同工之处。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 10 Apr 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/change.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/change.html</guid>
+			</item>
+		
+			<item>
+				<title>大脑不是用来思考的</title>
+				
+				
+					<description>&lt;p&gt;俗话说：「人类一思考，上帝就发笑。」无论是从历史上看还是身边的例子，人类的确有太多愚蠢的决策：第一次世界大战、冷战、珍珠岛战役。。。上帝是否发笑我们不知道，但三体人估计笑得不行。&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 08 Apr 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/essay/brain01.html</link>
+				<guid isPermaLink="true">http://localhost:4000/essay/brain01.html</guid>
+			</item>
+		
+			<item>
 				<title>积极情绪了解下？</title>
 				
 				
@@ -57,95 +138,6 @@
 				<pubDate>Sun, 18 Mar 2018 00:00:00 +0800</pubDate>
 				<link>http://localhost:4000/essay/emotion.html</link>
 				<guid isPermaLink="true">http://localhost:4000/essay/emotion.html</guid>
-			</item>
-		
-			<item>
-				<title>谈判之要义——你的最佳替代方案是什么？</title>
-				
-				
-					<description>&lt;h2 id=&quot;1&quot;&gt;1&lt;/h2&gt;
-&lt;p&gt;最佳替代方案即 BATNA————Best Alternative to a negotiated agreement.&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Sun, 11 Mar 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/essay/batna.html</link>
-				<guid isPermaLink="true">http://localhost:4000/essay/batna.html</guid>
-			</item>
-		
-			<item>
-				<title>静候那烟火</title>
-				
-				
-					<description>&lt;p&gt;空气中弥漫着树林和水的味道。夜色像一张黑色的网，笼罩在江面上。漫步江畔，耳闻远处小孩嬉戏打闹声，汽车鸣笛声，水流潺潺之音。江中望去，水流似乎比白天更急，像赶夜路的货车飞奔在高速路上，湍急的江水直奔下一个桥头，在桥墩下形成黑色的漩涡。&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Mon, 05 Mar 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/literatrue/hanabi.html</link>
-				<guid isPermaLink="true">http://localhost:4000/literatrue/hanabi.html</guid>
-			</item>
-		
-			<item>
-				<title>高铁停运的警示</title>
-				
-				
-					<description>&lt;p&gt;当生活一点点侵蚀过来，你是觉察不到危机的。&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Mon, 05 Mar 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/essay/gaotie.html</link>
-				<guid isPermaLink="true">http://localhost:4000/essay/gaotie.html</guid>
-			</item>
-		
-			<item>
-				<title>如何寻找到自己喜欢的事情</title>
-				
-				
-					<description>&lt;p&gt;有人问起，为什么你的兴趣这么多，读书，健身，摄影。我一般回答：不是我兴趣广泛，是你尝试得太少了。&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Sat, 03 Mar 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/essay/find-fav-job.html</link>
-				<guid isPermaLink="true">http://localhost:4000/essay/find-fav-job.html</guid>
-			</item>
-		
-			<item>
-				<title>python 自动生成第二代居民身份证号码</title>
-				
-				
-					<description>&lt;p&gt;工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。
-~~~python
-import random
-import time
-import xlwt&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Wed, 28 Feb 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/tech/random-id.html</link>
-				<guid isPermaLink="true">http://localhost:4000/tech/random-id.html</guid>
-			</item>
-		
-			<item>
-				<title>老有所依</title>
-				
-				
-					<description>&lt;blockquote&gt;
-  &lt;p&gt;脚趾死死抠住红泥&lt;br /&gt;
-头抵着树林&lt;br /&gt;
-为了在秋天和冬天让人回忆&lt;br /&gt;
-为了女儿的暗喜&lt;br /&gt;
-为了黎明寂寞而痛楚&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-				
-				<pubDate>Wed, 14 Feb 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/essay/oldman.html</link>
-				<guid isPermaLink="true">http://localhost:4000/essay/oldman.html</guid>
 			</item>
 		
 	</channel>
