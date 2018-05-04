@@ -34,6 +34,8 @@ We’re sorry…
 2401:3800:4001:10::101f scholar.google.cn #www.google.cn
 ~~~
 
+最新 [hosts](https://raw.githubusercontent.com/lennylxx/ipv6-hosts/master/hosts) 文件地址
+
 **step2**: 保存，重启ss服务.
 ~~~
 /etc/init.d/shadowsocks restart
