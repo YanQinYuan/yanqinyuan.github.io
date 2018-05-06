@@ -110,6 +110,40 @@
       
 <div class="posts">
   <h1>
+    <a href="/tech/sqlchemy-pg.html">解决生产测试环境数据库变量问题</a>
+  </h1>
+  
+  <p>
+    系统环境：ubuntu/macos，python，virtualenv,flask
+
+把以下代码加入 bin/activate 文件中（或者 docker 的 启动文件里），在环境启动的时候加入系统变量
+
+export POSTGRES_URL="127.0.0.1:5432"
+export POSTGRES_USER="postgres"
+export POSTGRES_PW="dbpw"
+export POSTGRES_DB="test"
+
+
+增加方法获取系统变量：
+def get_env_variable(name):
+    try:
+        return os.environ[name]
+    except KeyError:
+        message = "... <a href="/tech/sqlchemy-pg.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    less than 1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
     <a href="/essay/sports.html">当我运动的时候，我在想些什么</a>
   </h1>
   
@@ -256,63 +290,6 @@ gunicorn = "*"
 psycopg2 = "*"
 requests = ... <a href="/tech/heroku.html">Read more</a>
     <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 26 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/tech/appium01.html">玩转 Appium</a>
-  </h1>
-  
-  <p>
-    安装
-windows 环境 :
-
-  npm
-  java 1.8
-  Android SDK
-
-
-接着安装 appium 服务端
-npm install -g appium
-
-
-下载 appium 客户端（这里选择 python 版本）
-
-pip install Appium-Python-Client
-
-
-检查安装是否成功
-
-appium-doctor
-
-使用
-
-启动
-
-appium
-
-
-代码实例
-
-import os
-from time import sleep
-
-import unittest
-
-from appium import webdriver
-
-# Returns abs path relative to this file and not cwd
-PATH = la... <a href="/tech/appium01.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 25 Jan 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
   
   
     less than 1 minute read
