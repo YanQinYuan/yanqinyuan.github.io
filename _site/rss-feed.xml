@@ -7,6 +7,18 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Move</title>
+				
+				
+					<description>
+</description>
+				
+				<pubDate>Tue, 01 May 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/move.html</link>
+				<guid isPermaLink="true">http://localhost:4000/move.html</guid>
+			</item>
+		
+			<item>
 				<title>投资风格</title>
 				
 				
@@ -125,19 +137,6 @@
 				<pubDate>Thu, 22 Mar 2018 00:00:00 +0800</pubDate>
 				<link>http://localhost:4000/essay/self-identity.html</link>
 				<guid isPermaLink="true">http://localhost:4000/essay/self-identity.html</guid>
-			</item>
-		
-			<item>
-				<title>情感从何而来？</title>
-				
-				
-					<description>&lt;h2 id=&quot;为何会有情感情感从何而来&quot;&gt;为何会有情感，情感从何而来？&lt;/h2&gt;
-
-</description>
-				
-				<pubDate>Sun, 18 Mar 2018 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/essay/emotion.html</link>
-				<guid isPermaLink="true">http://localhost:4000/essay/emotion.html</guid>
 			</item>
 		
 	</channel>

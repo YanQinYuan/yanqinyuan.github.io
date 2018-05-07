@@ -110,6 +110,39 @@
       
 <div class="posts">
   <h1>
+    <a href="/tech/random-id.html">python 自动生成第二代居民身份证号码</a>
+  </h1>
+  
+  <p>
+    工作中经常需要用到身份证号创建用户，于是便倒腾着自己写一个生成居民身份证的小程序。
+import random
+import time
+import xlwt
+
+
+def write_to_xls(data, time_num):
+    """把结果写入xls文件"""
+    # 创建 xls 文件对象
+    wb = xlwt.Workbook()
+    # 新增一个表单
+    sh = wb.add_sheet('A Test Sheet', cell_overwrite_ok=True)
+    # 方法一：按位置添加数据,用 zip 打包，同时遍历两个 list
+    for i, j in zip(range(time_num), data):
+        s... <a href="/tech/random-id.html">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+  
+    1 minute read
+  
+
+
+
+</span>
+  </p>
+</div>
+
+<div class="posts">
+  <h1>
     <a href="/essay/oldman.html">老有所依</a>
   </h1>
   
@@ -243,34 +276,6 @@ class PythonOrgSearch(unittest.TestCase):
   
   
     2 minute read
-  
-
-
-
-</span>
-  </p>
-</div>
-
-<div class="posts">
-  <h1>
-    <a href="/tech/os-path.html">python 操作文件和目录</a>
-  </h1>
-  
-  <p>
-    &gt;&gt;&gt;os.path.abspath('.')
-'/www'
-&gt;&gt;&gt;os.path.join('/www','testdir')
-/www/testdir
-&gt;&gt;&gt;os.path.mkdir('/www/testdir')
-&gt;&gt;&gt;os.path.rmdir('/www/testdir')
-&gt;&gt;&gt;os.path.split('/www/testdir/file.txt')
-('www/testdir','file.txt')
-&gt;&gt;&gt;os.path.splitext('/www/testdir/file.txt') # 获取文件扩展名
-('/www/testdir/file','.tx... <a href="/tech/os-path.html">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Feb 2018 - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-  
-    less than 1 minute read
   
 
 
