@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google 学术访问受限问题"
+title: "Googsle 学术访问受限问题"
 date: 2018-05-04
 categories: essay
 image: birds.jpg
