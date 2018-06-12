@@ -2,7 +2,7 @@
 layout: post
 title: "python 常用内置方法"
 date: 2018-06-05
-categories: essay
+categories: technology
 image: city.jpg
 published: true
 ---
