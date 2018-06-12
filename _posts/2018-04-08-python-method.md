@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "python 常用内置方法"
-date: 2018-06-05
+date: 2018-04-08
 categories: technology
 image: city.jpg
 published: true
