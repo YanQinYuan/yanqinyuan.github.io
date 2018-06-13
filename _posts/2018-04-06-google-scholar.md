@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Googsle 学术访问受限问题"
-date: 2018-05-04
-categories: technology
+date: 2018-04-06
+categories: tech
 image: birds.jpg
 published: true
 ---
