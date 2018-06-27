@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "面子与成本"
-date: 2017-06-26
+date: 2018-06-26
 categories: essay
 image: birds.jpg
 published: true
