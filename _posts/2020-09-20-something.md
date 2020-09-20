@@ -1,4 +1,11 @@
-# 一次别离
+---
+layout: post
+title: "一次别离"
+date: 2020-09-20
+categories: essay
+image: city.jpg
+published: true
+---
 
 ## 风
 
